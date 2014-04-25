@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -15,8 +15,45 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KbE-Xc-3ZD">
+                                <rect key="frame" x="20" y="292" width="728" height="712"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="712" id="2Ly-12-aUu"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="4" translatesAutoresizingMaskIntoConstraints="NO" id="rSA-b9-bW4">
+                                <rect key="frame" x="20" y="256" width="728" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Scale to Fill"/>
+                                    <segment title="Aspect FIt"/>
+                                    <segment title="Aspect Fill"/>
+                                    <segment title="Redraw"/>
+                                    <segment title="Center"/>
+                                    <segment title="Top"/>
+                                    <segment title="Bottom"/>
+                                </segments>
+                                <connections>
+                                    <action selector="topSegmentedButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="mDH-v4-Sfr"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KbE-Xc-3ZD" secondAttribute="bottom" constant="20" symbolic="YES" id="4UL-gI-K35"/>
+                            <constraint firstItem="KbE-Xc-3ZD" firstAttribute="leading" secondItem="rSA-b9-bW4" secondAttribute="leading" id="52c-sb-oKi"/>
+                            <constraint firstItem="KbE-Xc-3ZD" firstAttribute="trailing" secondItem="rSA-b9-bW4" secondAttribute="trailing" id="He4-W6-8EO"/>
+                            <constraint firstItem="KbE-Xc-3ZD" firstAttribute="top" secondItem="rSA-b9-bW4" secondAttribute="bottom" constant="8" symbolic="YES" id="Hyp-9i-1rc"/>
+                            <constraint firstAttribute="trailing" secondItem="rSA-b9-bW4" secondAttribute="trailing" constant="20" id="QTX-Fy-ZpC"/>
+                            <constraint firstItem="rSA-b9-bW4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="fik-VW-B8e"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="marsImageView" destination="KbE-Xc-3ZD" id="iBf-4M-gTp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -22,6 +22,8 @@
 		E0FDEAF9190A29C30006DE0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD8190A29C30006DE0A /* UIKit.framework */; };
 		E0FDEB01190A29C30006DE0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0FDEAFF190A29C30006DE0A /* InfoPlist.strings */; };
 		E0FDEB03190A29C30006DE0A /* Chapter_2___DrawingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FDEB02190A29C30006DE0A /* Chapter_2___DrawingTests.m */; };
+		E0FDEB0D190A3F130006DE0A /* smileyiPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = E0FDEB0C190A3F130006DE0A /* smileyiPhone.png */; };
+		E0FDEB15190A4E690006DE0A /* 396px-Mona_Lisa.png in Resources */ = {isa = PBXBuildFile; fileRef = E0FDEB14190A4E690006DE0A /* 396px-Mona_Lisa.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		E0FDEAFE190A29C30006DE0A /* Chapter 2 - DrawingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chapter 2 - DrawingTests-Info.plist"; sourceTree = "<group>"; };
 		E0FDEB00190A29C30006DE0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E0FDEB02190A29C30006DE0A /* Chapter_2___DrawingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Chapter_2___DrawingTests.m"; sourceTree = "<group>"; };
+		E0FDEB0C190A3F130006DE0A /* smileyiPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smileyiPhone.png; sourceTree = "<group>"; };
+		E0FDEB14190A4E690006DE0A /* 396px-Mona_Lisa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "396px-Mona_Lisa.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +122,11 @@
 				E0FDEAE4190A29C30006DE0A /* AppDelegate.m */,
 				E0FDEAE6190A29C30006DE0A /* Main_iPhone.storyboard */,
 				E0FDEAE9190A29C30006DE0A /* Main_iPad.storyboard */,
+				E0FDEB14190A4E690006DE0A /* 396px-Mona_Lisa.png */,
 				E0FDEAEC190A29C30006DE0A /* ViewController.h */,
 				E0FDEAED190A29C30006DE0A /* ViewController.m */,
 				E0FDEAEF190A29C30006DE0A /* Images.xcassets */,
+				E0FDEB0C190A3F130006DE0A /* smileyiPhone.png */,
 				E0FDEADB190A29C30006DE0A /* Supporting Files */,
 			);
 			path = "Chapter 2 - Drawing";
@@ -231,7 +237,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FDEB15190A4E690006DE0A /* 396px-Mona_Lisa.png in Resources */,
 				E0FDEAEB190A29C30006DE0A /* Main_iPad.storyboard in Resources */,
+				E0FDEB0D190A3F130006DE0A /* smileyiPhone.png in Resources */,
 				E0FDEAF0190A29C30006DE0A /* Images.xcassets in Resources */,
 				E0FDEAE8190A29C30006DE0A /* Main_iPhone.storyboard in Resources */,
 				E0FDEADF190A29C30006DE0A /* InfoPlist.strings in Resources */,
