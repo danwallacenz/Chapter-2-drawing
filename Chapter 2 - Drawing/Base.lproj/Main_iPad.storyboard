@@ -31,10 +31,10 @@
                                     <segment title="Scale to Fill"/>
                                     <segment title="Aspect FIt"/>
                                     <segment title="Aspect Fill"/>
-                                    <segment title="Redraw"/>
                                     <segment title="Center"/>
                                     <segment title="Top"/>
                                     <segment title="Bottom"/>
+                                    <segment title="Left"/>
                                 </segments>
                                 <connections>
                                     <action selector="topSegmentedButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="mDH-v4-Sfr"/>

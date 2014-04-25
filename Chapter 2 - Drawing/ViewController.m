@@ -28,16 +28,16 @@
             self.marsImageView.contentMode = UIViewContentModeScaleAspectFill;
             break;
         case 3:
-            self.marsImageView.contentMode = UIViewContentModeRedraw;
-            break;
-        case 4:
             self.marsImageView.contentMode = UIViewContentModeCenter;
             break;
-        case 5:
+        case 4:
             self.marsImageView.contentMode = UIViewContentModeTop;
             break;
-        case 6:
+        case 5:
             self.marsImageView.contentMode = UIViewContentModeBottom;
+            break;
+        case 6:
+            self.marsImageView.contentMode = UIViewContentModeLeft;
             break;
             
         default:
