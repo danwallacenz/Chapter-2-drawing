@@ -29,6 +29,8 @@
 		E0FEBAEF190B592E008DB40D /* wheelchair-girl-one-half-size.png in Resources */ = {isa = PBXBuildFile; fileRef = E0FEBAEE190B592E008DB40D /* wheelchair-girl-one-half-size.png */; };
 		E0FEBAF1190B59A0008DB40D /* wheelchair-girl-two-thirds-size.png in Resources */ = {isa = PBXBuildFile; fileRef = E0FEBAF0190B59A0008DB40D /* wheelchair-girl-two-thirds-size.png */; };
 		E0FEBAF3190B5E6E008DB40D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FEBAF2190B5E6E008DB40D /* QuartzCore.framework */; };
+		E0FEBAF5190B7786008DB40D /* wheelchair-girl-two-thirds-size-transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = E0FEBAF4190B7786008DB40D /* wheelchair-girl-two-thirds-size-transparent.png */; };
+		E0FEBAF7190B78EB008DB40D /* wheelchair-girl-two-thirds-size-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = E0FEBAF6190B78EB008DB40D /* wheelchair-girl-two-thirds-size-gray.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		E0FEBAEE190B592E008DB40D /* wheelchair-girl-one-half-size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-one-half-size.png"; sourceTree = "<group>"; };
 		E0FEBAF0190B59A0008DB40D /* wheelchair-girl-two-thirds-size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size.png"; sourceTree = "<group>"; };
 		E0FEBAF2190B5E6E008DB40D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E0FEBAF4190B7786008DB40D /* wheelchair-girl-two-thirds-size-transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size-transparent.png"; sourceTree = "<group>"; };
+		E0FEBAF6190B78EB008DB40D /* wheelchair-girl-two-thirds-size-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size-gray.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 				E0FDEAE4190A29C30006DE0A /* AppDelegate.m */,
 				E0FDEAE6190A29C30006DE0A /* Main_iPhone.storyboard */,
 				E0FDEAE9190A29C30006DE0A /* Main_iPad.storyboard */,
+				E0FEBAF6190B78EB008DB40D /* wheelchair-girl-two-thirds-size-gray.png */,
+				E0FEBAF4190B7786008DB40D /* wheelchair-girl-two-thirds-size-transparent.png */,
 				E0FDEB14190A4E690006DE0A /* 396px-Mona_Lisa.png */,
 				E0FDEAEC190A29C30006DE0A /* ViewController.h */,
 				E0FDEAED190A29C30006DE0A /* ViewController.m */,
@@ -253,9 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FEBAF7190B78EB008DB40D /* wheelchair-girl-two-thirds-size-gray.png in Resources */,
 				E0FEBAEF190B592E008DB40D /* wheelchair-girl-one-half-size.png in Resources */,
 				E0FDEB15190A4E690006DE0A /* 396px-Mona_Lisa.png in Resources */,
 				E0FDEAEB190A29C30006DE0A /* Main_iPad.storyboard in Resources */,
+				E0FEBAF5190B7786008DB40D /* wheelchair-girl-two-thirds-size-transparent.png in Resources */,
 				E0FEBAF1190B59A0008DB40D /* wheelchair-girl-two-thirds-size.png in Resources */,
 				E0FDEB0D190A3F130006DE0A /* smileyiPhone.png in Resources */,
 				E0FDEAF0190A29C30006DE0A /* Images.xcassets in Resources */,

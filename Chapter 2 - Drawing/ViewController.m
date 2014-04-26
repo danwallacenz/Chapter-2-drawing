@@ -37,6 +37,7 @@
     self.boundsHeightLabel.text = [NSString stringWithFormat:@"h: %f",   sender.value];
     
 }
+
 - (IBAction)clipToBounds:(UISwitch *)sender {
     self.theImageView.clipsToBounds = !self.theImageView.clipsToBounds;
 }
@@ -45,13 +46,15 @@
     self.theImageView.opaque = !self.theImageView.opaque;
     NSLog(@"opaque=%d", self.theImageView.opaque);
     self.opaqueLabel.text = [NSString stringWithFormat:self.theImageView.opaque == YES?@"yes":@"no"];
+//    [self.theImageView setNeedsDisplayInRect:self.theImageView.bounds];
+    [self.view setNeedsDisplayInRect:self.view.bounds];
 }
 
 - (IBAction)mainViewBackgroundColorToggled:(UISwitch *)sender {
     if(self.view.backgroundColor){
         self.view.backgroundColor = nil;
     }else{
-        self.view.backgroundColor = [UIColor grayColor];
+        self.view.backgroundColor = [UIColor blueColor];
     }
 }
 
@@ -59,7 +62,7 @@
     if(self.theImageView.backgroundColor){
         self.theImageView.backgroundColor = nil;
     }else{
-        self.theImageView.backgroundColor = [UIColor whiteColor];
+        self.theImageView.backgroundColor = [UIColor greenColor];
     }
 }
 
@@ -116,22 +119,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-//    self.marsImageView.image = [UIImage imageNamed:@"396px-Mona_Lisa.png"];
-    
 
     self.view.backgroundColor = nil;
+    self.theImageView.backgroundColor = nil;
+    
     self.theImageView.layer.masksToBounds = YES;
     self.theImageView.layer.borderColor = [UIColor redColor].CGColor;
     self.theImageView.layer.borderWidth = 1;
-    self.theImageView.backgroundColor = nil;
+
     self.theImageView.contentMode = UIViewContentModeCenter;
     
-    self.theImageView.image = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size.png"];
-    
-    
-    
-//    self.marsImageView.autoresizingMask = (UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth);
+    self.theImageView.image = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size-transparent.png"];
+
 }
 
 - (void)didReceiveMemoryWarning
