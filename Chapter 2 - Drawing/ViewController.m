@@ -11,11 +11,28 @@
 
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *theImageView;
+
+@property (weak, nonatomic) IBOutlet UISlider *widthSlider;
+@property (weak, nonatomic) IBOutlet UISlider *heightSlider;
 
 @end
 
 @implementation ViewController
+
+#pragma mark - actions.
+- (IBAction)widthChanged:(UISlider *)sender {
+    
+    self.theImageView.bounds = CGRectMake(0, 0, sender.value, self.heightSlider.value);
+    
+}
+
+- (IBAction)heightChanged:(UISlider *)sender {
+    
+        self.theImageView.bounds = CGRectMake(0, 0,  self.widthSlider.value, sender.value);
+}
+
 
 - (IBAction)topSegmentedButton:(UISegmentedControl *)sender {
     long selectedIndex = sender.selectedSegmentIndex;
@@ -64,6 +81,8 @@
     
 }
 
+
+#pragma mark - UIViewController methods.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
