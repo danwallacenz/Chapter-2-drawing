@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "QuartzCore/QuartzCore.h"
+
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *marsImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *theImageView;
 
 @end
 
@@ -19,31 +21,31 @@
     long selectedIndex = sender.selectedSegmentIndex;
     switch (selectedIndex) {
         case 0:
-            self.marsImageView.contentMode = UIViewContentModeScaleToFill;
+            self.theImageView.contentMode = UIViewContentModeScaleToFill;
             break;
         case 1:
-            self.marsImageView.contentMode = UIViewContentModeScaleAspectFit;
+            self.theImageView.contentMode = UIViewContentModeScaleAspectFit;
             break;
         case 2:
-            self.marsImageView.contentMode = UIViewContentModeScaleAspectFill;
+            self.theImageView.contentMode = UIViewContentModeScaleAspectFill;
             break;
         case 3:
-            self.marsImageView.contentMode = UIViewContentModeCenter;
+            self.theImageView.contentMode = UIViewContentModeCenter;
             break;
         case 4:
-            self.marsImageView.contentMode = UIViewContentModeTop;
+            self.theImageView.contentMode = UIViewContentModeTop;
             break;
         case 5:
-            self.marsImageView.contentMode = UIViewContentModeBottom;
+            self.theImageView.contentMode = UIViewContentModeBottom;
             break;
         case 6:
-            self.marsImageView.contentMode = UIViewContentModeLeft;
+            self.theImageView.contentMode = UIViewContentModeLeft;
             break;
             
         default:
             break;
     }
-    [self.view setNeedsDisplayInRect:self.marsImageView.bounds];
+    [self.view setNeedsDisplayInRect: self.theImageView.bounds];
     
 }
 
@@ -54,7 +56,16 @@
     
 //    self.marsImageView.image = [UIImage imageNamed:@"396px-Mona_Lisa.png"];
     
-     self.marsImageView.image = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size.png"];
+
+    
+    self.theImageView.layer.masksToBounds = YES;
+    self.theImageView.layer.borderColor = [UIColor redColor].CGColor;
+    self.theImageView.layer.borderWidth = 1;
+    self.theImageView.backgroundColor = nil;
+    
+    self.theImageView.image = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size.png"];
+    
+    
     
 //    self.marsImageView.autoresizingMask = (UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth);
 }

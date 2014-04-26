@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KbE-Xc-3ZD">
-                                <rect key="frame" x="20" y="292" width="728" height="712"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KbE-Xc-3ZD">
+                                <rect key="frame" x="20" y="156" width="728" height="712"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -42,17 +42,17 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="KbE-Xc-3ZD" secondAttribute="bottom" constant="20" symbolic="YES" id="4UL-gI-K35"/>
                             <constraint firstAttribute="centerX" secondItem="KbE-Xc-3ZD" secondAttribute="centerX" id="9Vi-IV-bVA"/>
-                            <constraint firstItem="rSA-b9-bW4" firstAttribute="trailing" secondItem="KbE-Xc-3ZD" secondAttribute="trailing" id="Yg4-UK-tCL"/>
-                            <constraint firstItem="rSA-b9-bW4" firstAttribute="leading" secondItem="KbE-Xc-3ZD" secondAttribute="leading" id="apI-7G-adM"/>
+                            <constraint firstAttribute="centerY" secondItem="KbE-Xc-3ZD" secondAttribute="centerY" id="L6E-F7-T03"/>
+                            <constraint firstItem="rSA-b9-bW4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="LDC-Ia-Ig8"/>
                             <constraint firstItem="rSA-b9-bW4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="gJW-CZ-aoB"/>
+                            <constraint firstAttribute="trailing" secondItem="rSA-b9-bW4" secondAttribute="trailing" constant="20" id="jqU-Jv-RK9"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="marsImageView" destination="KbE-Xc-3ZD" id="iBf-4M-gTp"/>
+                        <outlet property="theImageView" destination="KbE-Xc-3ZD" id="3fB-vQ-BHF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
