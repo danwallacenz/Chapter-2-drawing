@@ -16,6 +16,8 @@
 
 @property (weak, nonatomic) IBOutlet UISlider *widthSlider;
 @property (weak, nonatomic) IBOutlet UISlider *heightSlider;
+@property (weak, nonatomic) IBOutlet UILabel *boundsWidthLabel;
+@property (weak, nonatomic) IBOutlet UILabel *boundsHeightLabel;
 
 @end
 
@@ -25,12 +27,17 @@
 - (IBAction)widthChanged:(UISlider *)sender {
     
     self.theImageView.bounds = CGRectMake(0, 0, sender.value, self.heightSlider.value);
-    
+    self.boundsWidthLabel.text = [NSString stringWithFormat:@"w: %f", sender.value];
 }
 
 - (IBAction)heightChanged:(UISlider *)sender {
     
-        self.theImageView.bounds = CGRectMake(0, 0,  self.widthSlider.value, sender.value);
+    self.theImageView.bounds = CGRectMake(0, 0,  self.widthSlider.value, sender.value);
+    self.boundsHeightLabel.text = [NSString stringWithFormat:@"h: %f",   sender.value];
+    
+}
+- (IBAction)clipToBounds:(UISwitch *)sender {
+    self.theImageView.clipsToBounds = !self.theImageView.clipsToBounds;
 }
 
 
