@@ -23,6 +23,7 @@
 @property (strong, nonatomic) UIImage *transparentImage;
 @property (strong, nonatomic) UIImage *opaqueImage;
 @property (strong, nonatomic) UIImage *currentImage;
+@property (weak, nonatomic) IBOutlet UISwitch *opaqueSwitch;
 
 @end
 
@@ -47,7 +48,13 @@
 }
 
 - (IBAction)opaqueChanged:(UISwitch *)sender {
-    self.theImageView.opaque = !self.theImageView.opaque;
+//    self.theImageView.opaque = !self.theImageView.opaque;
+    if(self.theImageView.opaque == YES){
+        self.theImageView.opaque = NO;
+    }else{
+        self.theImageView.opaque = YES;
+    }
+    
     NSLog(@"opaque=%d", self.theImageView.opaque);
     self.opaqueLabel.text = [NSString stringWithFormat:self.theImageView.opaque == YES?@"yes":@"no"];
     
@@ -136,7 +143,9 @@
 
     self.transparentImage = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size-transparent.png"];
     self.opaqueImage = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size.png"];
-
+    self.opaqueLabel.text = self.theImageView.opaque == YES?@"yes":@"no";
+    [self.opaqueSwitch setOn:self.theImageView.opaque animated:YES];
+    
     
     self.view.backgroundColor = nil;
     self.theImageView.backgroundColor = nil;
