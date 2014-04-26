@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KbE-Xc-3ZD">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KbE-Xc-3ZD">
                                 <rect key="frame" x="20" y="156" width="728" height="712"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -91,6 +91,25 @@
                                     <action selector="clipToBounds:" destination="BYZ-38-t0r" eventType="valueChanged" id="aKk-oa-T1D"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="opaque:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euB-zT-pQa">
+                                <rect key="frame" x="387" y="920" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCE-xq-mNV">
+                                <rect key="frame" x="458" y="915" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="opaqueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Il0-re-2CF"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="yes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cc2-sQ-B5I">
+                                <rect key="frame" x="515" y="920" width="27" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -105,6 +124,7 @@
                         <outlet property="boundsHeightLabel" destination="NWK-YH-g2p" id="vm5-ZE-op1"/>
                         <outlet property="boundsWidthLabel" destination="cgZ-hG-off" id="Hcx-KS-1h3"/>
                         <outlet property="heightSlider" destination="pAr-do-KNf" id="Ii5-lc-8Zk"/>
+                        <outlet property="opaqueLabel" destination="Cc2-sQ-B5I" id="rmm-8d-pn7"/>
                         <outlet property="theImageView" destination="KbE-Xc-3ZD" id="3fB-vQ-BHF"/>
                         <outlet property="widthSlider" destination="TOf-ji-VGY" id="KTk-zP-JGe"/>
                     </connections>

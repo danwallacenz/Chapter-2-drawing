@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *heightSlider;
 @property (weak, nonatomic) IBOutlet UILabel *boundsWidthLabel;
 @property (weak, nonatomic) IBOutlet UILabel *boundsHeightLabel;
+@property (weak, nonatomic) IBOutlet UILabel *opaqueLabel;
 
 @end
 
@@ -40,6 +41,11 @@
     self.theImageView.clipsToBounds = !self.theImageView.clipsToBounds;
 }
 
+- (IBAction)opaqueChanged:(UISwitch *)sender {
+    self.theImageView.opaque = !self.theImageView.opaque;
+    NSLog(@"opaque=%d", self.theImageView.opaque);
+    self.opaqueLabel.text = [NSString stringWithFormat:self.theImageView.opaque == YES?@"yes":@"no"];
+}
 
 - (IBAction)topSegmentedButton:(UISegmentedControl *)sender {
     long selectedIndex = sender.selectedSegmentIndex;
