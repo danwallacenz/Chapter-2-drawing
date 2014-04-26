@@ -22,7 +22,14 @@
 
 @property (strong, nonatomic) UIImage *transparentImage;
 @property (strong, nonatomic) UIImage *opaqueImage;
+@property (strong, nonatomic) UIImage *transparentImageTemplate;
+@property (strong, nonatomic) UIImage *opaqueImageTemplate;
 @property (strong, nonatomic) UIImage *currentImage;
+
+@property BOOL useTransparentImages;
+@property BOOL useTemplateImages;
+
+
 @property (weak, nonatomic) IBOutlet UISwitch *opaqueSwitch;
 
 @end
@@ -67,9 +74,9 @@
         self.view.backgroundColor = nil;
     }else{
         self.view.backgroundColor = [UIColor colorWithRed:.8 green:.9 blue:.9 alpha:1];
-
     }
 }
+
 
 - (IBAction)imageViewBackgroundColorToggled:(UISwitch *)sender {
     if(self.theImageView.backgroundColor){
@@ -79,11 +86,62 @@
     }
 }
 - (IBAction)transparentImageChange:(UISwitch *)sender {
-    if(self.currentImage == self.transparentImage){
-        self.currentImage = self.opaqueImage;
+    
+    self.useTransparentImages = sender.on;
+    [self setImage];
+    
+    
+//    if(self.currentImage == self.transparentImage){
+//        self.currentImage = self.opaqueImage;
+//    }else{
+//        self.currentImage = self.transparentImage;
+//    }
+//    self.theImageView.image = self.currentImage;
+}
+
+- (IBAction)templateImagesChanged:(UISwitch *)sender {
+//    if (sender.on) {
+//        self.useTransparentImages = YES;
+//    }else{
+//        self.useTransparentImages = NO;
+//    }
+    
+    self.useTemplateImages = sender.on;
+    [self setImage];
+        
+//        if (self.currentImage == self.opaqueImage) {
+//            self.theImageView.image = self.opaqueImageTemplate;
+//        }else{
+//            self.theImageView.image = self.transparentImageTemplate;
+//        }
+//    }else{
+//        if (self.currentImage == self.opaqueImageTemplate) {
+//            self.theImageView.image = self.opaqueImage;
+//        }else{
+//            self.theImageView.image = self.transparentImage;
+//        }
+//    }
+}
+
+-(void) setImage
+{
+    NSLog(@"useTransparentImages %@. useTemplateImages %@.", self.useTransparentImages==YES?@"yes":@"no", self.useTemplateImages==YES?@"yes":@"no");
+    NSLog(@"IMAGE BEFORE current image = %@.", self.currentImage);
+    
+    if(self.useTransparentImages == YES){
+        if(self.useTemplateImages){
+            self.currentImage = self.transparentImageTemplate;
+        }else{
+             self.currentImage = self.transparentImage;
+        }
     }else{
-        self.currentImage = self.transparentImage;
+        if(self.useTemplateImages == YES){
+            self.currentImage = self.opaqueImageTemplate;
+        }else{
+            self.currentImage = self.opaqueImage;
+        }
     }
+    NSLog(@"IMAGE AFTER current image = %@.", self.currentImage);
     self.theImageView.image = self.currentImage;
 }
 
@@ -142,7 +200,14 @@
 	// Do any additional setup after loading the view, typically from a nib.
 
     self.transparentImage = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size-transparent.png"];
+    self.transparentImageTemplate = [self.transparentImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
     self.opaqueImage = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size.png"];
+    self.opaqueImageTemplate = [self.transparentImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
+
+
+    
     self.opaqueLabel.text = self.theImageView.opaque == YES?@"yes":@"no";
     [self.opaqueSwitch setOn:self.theImageView.opaque animated:YES];
     
@@ -156,8 +221,12 @@
 
     self.theImageView.contentMode = UIViewContentModeCenter;
     
-    self.theImageView.image = self.transparentImage;
+//    self.theImageView.image = self.transparentImage;
     self.currentImage = self.transparentImage;
+    self.useTransparentImages = YES;
+    
+    self.useTemplateImages = NO;
+    [self setImage];
 
 }
 
