@@ -52,7 +52,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.marsImageView.image = [UIImage imageNamed:@"396px-Mona_Lisa.png"];
+//    self.marsImageView.image = [UIImage imageNamed:@"396px-Mona_Lisa.png"];
+    
+     self.marsImageView.image = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size.png"];
     
 //    self.marsImageView.autoresizingMask = (UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth);
 }

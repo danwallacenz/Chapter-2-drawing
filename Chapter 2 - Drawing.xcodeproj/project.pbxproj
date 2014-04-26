@@ -24,6 +24,10 @@
 		E0FDEB03190A29C30006DE0A /* Chapter_2___DrawingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FDEB02190A29C30006DE0A /* Chapter_2___DrawingTests.m */; };
 		E0FDEB0D190A3F130006DE0A /* smileyiPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = E0FDEB0C190A3F130006DE0A /* smileyiPhone.png */; };
 		E0FDEB15190A4E690006DE0A /* 396px-Mona_Lisa.png in Resources */ = {isa = PBXBuildFile; fileRef = E0FDEB14190A4E690006DE0A /* 396px-Mona_Lisa.png */; };
+		E0FEBAEB190B5717008DB40D /* wheelchair-girl.png in Resources */ = {isa = PBXBuildFile; fileRef = E0FEBAEA190B5717008DB40D /* wheelchair-girl.png */; };
+		E0FEBAED190B58C0008DB40D /* wheelchair-girl-one-third-size.png in Resources */ = {isa = PBXBuildFile; fileRef = E0FEBAEC190B58C0008DB40D /* wheelchair-girl-one-third-size.png */; };
+		E0FEBAEF190B592E008DB40D /* wheelchair-girl-one-half-size.png in Resources */ = {isa = PBXBuildFile; fileRef = E0FEBAEE190B592E008DB40D /* wheelchair-girl-one-half-size.png */; };
+		E0FEBAF1190B59A0008DB40D /* wheelchair-girl-two-thirds-size.png in Resources */ = {isa = PBXBuildFile; fileRef = E0FEBAF0190B59A0008DB40D /* wheelchair-girl-two-thirds-size.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		E0FDEB02190A29C30006DE0A /* Chapter_2___DrawingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Chapter_2___DrawingTests.m"; sourceTree = "<group>"; };
 		E0FDEB0C190A3F130006DE0A /* smileyiPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smileyiPhone.png; sourceTree = "<group>"; };
 		E0FDEB14190A4E690006DE0A /* 396px-Mona_Lisa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "396px-Mona_Lisa.png"; sourceTree = "<group>"; };
+		E0FEBAEA190B5717008DB40D /* wheelchair-girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl.png"; sourceTree = "<group>"; };
+		E0FEBAEC190B58C0008DB40D /* wheelchair-girl-one-third-size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-one-third-size.png"; sourceTree = "<group>"; };
+		E0FEBAEE190B592E008DB40D /* wheelchair-girl-one-half-size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-one-half-size.png"; sourceTree = "<group>"; };
+		E0FEBAF0190B59A0008DB40D /* wheelchair-girl-two-thirds-size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +133,12 @@
 				E0FDEB14190A4E690006DE0A /* 396px-Mona_Lisa.png */,
 				E0FDEAEC190A29C30006DE0A /* ViewController.h */,
 				E0FDEAED190A29C30006DE0A /* ViewController.m */,
+				E0FEBAF0190B59A0008DB40D /* wheelchair-girl-two-thirds-size.png */,
+				E0FEBAEE190B592E008DB40D /* wheelchair-girl-one-half-size.png */,
+				E0FEBAEC190B58C0008DB40D /* wheelchair-girl-one-third-size.png */,
 				E0FDEAEF190A29C30006DE0A /* Images.xcassets */,
 				E0FDEB0C190A3F130006DE0A /* smileyiPhone.png */,
+				E0FEBAEA190B5717008DB40D /* wheelchair-girl.png */,
 				E0FDEADB190A29C30006DE0A /* Supporting Files */,
 			);
 			path = "Chapter 2 - Drawing";
@@ -237,12 +249,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FEBAEF190B592E008DB40D /* wheelchair-girl-one-half-size.png in Resources */,
 				E0FDEB15190A4E690006DE0A /* 396px-Mona_Lisa.png in Resources */,
 				E0FDEAEB190A29C30006DE0A /* Main_iPad.storyboard in Resources */,
+				E0FEBAF1190B59A0008DB40D /* wheelchair-girl-two-thirds-size.png in Resources */,
 				E0FDEB0D190A3F130006DE0A /* smileyiPhone.png in Resources */,
 				E0FDEAF0190A29C30006DE0A /* Images.xcassets in Resources */,
+				E0FEBAEB190B5717008DB40D /* wheelchair-girl.png in Resources */,
 				E0FDEAE8190A29C30006DE0A /* Main_iPhone.storyboard in Resources */,
 				E0FDEADF190A29C30006DE0A /* InfoPlist.strings in Resources */,
+				E0FEBAED190B58C0008DB40D /* wheelchair-girl-one-third-size.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +494,7 @@
 				E0FDEB08190A29C30006DE0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0FDEB09190A29C30006DE0A /* Build configuration list for PBXNativeTarget "Chapter 2 - DrawingTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +503,7 @@
 				E0FDEB0B190A29C30006DE0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
