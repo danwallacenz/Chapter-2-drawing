@@ -20,6 +20,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *boundsHeightLabel;
 @property (weak, nonatomic) IBOutlet UILabel *opaqueLabel;
 
+@property (strong, nonatomic) UIImage *transparentImage;
+@property (strong, nonatomic) UIImage *opaqueImage;
+@property (strong, nonatomic) UIImage *currentImage;
+
 @end
 
 @implementation ViewController
@@ -46,7 +50,8 @@
     self.theImageView.opaque = !self.theImageView.opaque;
     NSLog(@"opaque=%d", self.theImageView.opaque);
     self.opaqueLabel.text = [NSString stringWithFormat:self.theImageView.opaque == YES?@"yes":@"no"];
-//    [self.theImageView setNeedsDisplayInRect:self.theImageView.bounds];
+    
+    [self.theImageView setNeedsDisplayInRect:self.theImageView.bounds];
     [self.view setNeedsDisplayInRect:self.view.bounds];
 }
 
@@ -54,7 +59,8 @@
     if(self.view.backgroundColor){
         self.view.backgroundColor = nil;
     }else{
-        self.view.backgroundColor = [UIColor blueColor];
+        self.view.backgroundColor = [UIColor colorWithRed:.8 green:.9 blue:.9 alpha:1];
+
     }
 }
 
@@ -62,8 +68,16 @@
     if(self.theImageView.backgroundColor){
         self.theImageView.backgroundColor = nil;
     }else{
-        self.theImageView.backgroundColor = [UIColor greenColor];
+        self.theImageView.backgroundColor = [UIColor colorWithRed:.7 green:.8 blue:.8 alpha:1];
     }
+}
+- (IBAction)transparentImageChange:(UISwitch *)sender {
+    if(self.currentImage == self.transparentImage){
+        self.currentImage = self.opaqueImage;
+    }else{
+        self.currentImage = self.transparentImage;
+    }
+    self.theImageView.image = self.currentImage;
 }
 
 - (IBAction)topSegmentedButton:(UISegmentedControl *)sender {
@@ -120,6 +134,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
+    self.transparentImage = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size-transparent.png"];
+    self.opaqueImage = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size.png"];
+
+    
     self.view.backgroundColor = nil;
     self.theImageView.backgroundColor = nil;
     
@@ -129,7 +147,8 @@
 
     self.theImageView.contentMode = UIViewContentModeCenter;
     
-    self.theImageView.image = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size-transparent.png"];
+    self.theImageView.image = self.transparentImage;
+    self.currentImage = self.transparentImage;
 
 }
 
