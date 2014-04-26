@@ -47,6 +47,22 @@
     self.opaqueLabel.text = [NSString stringWithFormat:self.theImageView.opaque == YES?@"yes":@"no"];
 }
 
+- (IBAction)mainViewBackgroundColorToggled:(UISwitch *)sender {
+    if(self.view.backgroundColor){
+        self.view.backgroundColor = nil;
+    }else{
+        self.view.backgroundColor = [UIColor grayColor];
+    }
+}
+
+- (IBAction)imageViewBackgroundColorToggled:(UISwitch *)sender {
+    if(self.theImageView.backgroundColor){
+        self.theImageView.backgroundColor = nil;
+    }else{
+        self.theImageView.backgroundColor = [UIColor whiteColor];
+    }
+}
+
 - (IBAction)topSegmentedButton:(UISegmentedControl *)sender {
     long selectedIndex = sender.selectedSegmentIndex;
     switch (selectedIndex) {
@@ -104,11 +120,12 @@
 //    self.marsImageView.image = [UIImage imageNamed:@"396px-Mona_Lisa.png"];
     
 
-    
+    self.view.backgroundColor = nil;
     self.theImageView.layer.masksToBounds = YES;
     self.theImageView.layer.borderColor = [UIColor redColor].CGColor;
     self.theImageView.layer.borderWidth = 1;
     self.theImageView.backgroundColor = nil;
+    self.theImageView.contentMode = UIViewContentModeCenter;
     
     self.theImageView.image = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size.png"];
     
