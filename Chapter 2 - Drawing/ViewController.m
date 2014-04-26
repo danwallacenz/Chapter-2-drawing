@@ -41,6 +41,21 @@
         case 6:
             self.theImageView.contentMode = UIViewContentModeLeft;
             break;
+        case 7:
+            self.theImageView.contentMode = UIViewContentModeRight;
+            break;
+        case 8:
+            self.theImageView.contentMode = UIViewContentModeTopLeft;
+            break;
+        case 9:
+            self.theImageView.contentMode = UIViewContentModeTopRight;
+            break;
+        case 10:
+            self.theImageView.contentMode = UIViewContentModeBottomLeft;
+            break;
+        case 11:
+            self.theImageView.contentMode = UIViewContentModeBottomRight;
+            break;
             
         default:
             break;
