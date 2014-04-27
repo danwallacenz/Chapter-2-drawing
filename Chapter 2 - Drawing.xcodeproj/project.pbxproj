@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E0C6DD5E190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C6DD5D190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png */; };
 		E0C6DD60190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C6DD5F190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png */; };
+		E0C6DD63190C8685002FC62F /* ResizableImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DD62190C8685002FC62F /* ResizableImagesViewController.m */; };
 		E0FDEAD5190A29C30006DE0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD4190A29C30006DE0A /* Foundation.framework */; };
 		E0FDEAD7190A29C30006DE0A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD6190A29C30006DE0A /* CoreGraphics.framework */; };
 		E0FDEAD9190A29C30006DE0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD8190A29C30006DE0A /* UIKit.framework */; };
@@ -48,6 +49,8 @@
 /* Begin PBXFileReference section */
 		E0C6DD5D190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size-with-text.png"; sourceTree = "<group>"; };
 		E0C6DD5F190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size-with-text-and-no-layers.png"; sourceTree = "<group>"; };
+		E0C6DD61190C8685002FC62F /* ResizableImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizableImagesViewController.h; sourceTree = "<group>"; };
+		E0C6DD62190C8685002FC62F /* ResizableImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizableImagesViewController.m; sourceTree = "<group>"; };
 		E0FDEAD1190A29C30006DE0A /* Chapter 2 - Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chapter 2 - Drawing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FDEAD4190A29C30006DE0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E0FDEAD6190A29C30006DE0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -138,6 +141,8 @@
 		E0FDEADA190A29C30006DE0A /* Chapter 2 - Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				E0C6DD61190C8685002FC62F /* ResizableImagesViewController.h */,
+				E0C6DD62190C8685002FC62F /* ResizableImagesViewController.m */,
 				E0FDEAE3190A29C30006DE0A /* AppDelegate.h */,
 				E0FDEAE4190A29C30006DE0A /* AppDelegate.m */,
 				E0FDEAE6190A29C30006DE0A /* Main_iPhone.storyboard */,
@@ -297,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0C6DD63190C8685002FC62F /* ResizableImagesViewController.m in Sources */,
 				E0FDEAEE190A29C30006DE0A /* ViewController.m in Sources */,
 				E0FDEAE5190A29C30006DE0A /* AppDelegate.m in Sources */,
 				E0FDEAE1190A29C30006DE0A /* main.m in Sources */,
