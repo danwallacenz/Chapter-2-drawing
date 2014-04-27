@@ -257,6 +257,19 @@
                                     <action selector="UIImageResizingModeChanged:" destination="flc-8c-IA9" eventType="valueChanged" id="Pdn-m0-fsO"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="capInsets:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ5-Ru-1wY">
+                                <rect key="frame" x="20" y="409" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-200" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="c6P-H5-cx2">
+                                <rect key="frame" x="106" y="405" width="563" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="capInsetsChanged:" destination="flc-8c-IA9" eventType="valueChanged" id="hSK-b9-3UH"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

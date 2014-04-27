@@ -18,6 +18,18 @@
 
 #pragma mark - actions
 
+
+- (IBAction)capInsetsChanged:(UISlider *)sender {
+    UIImage *mars = [UIImage imageNamed:@"Mars"];
+    UIImage *marsResized;
+    
+    UIEdgeInsets insets = UIEdgeInsetsMake(mars.size.height - sender.value, mars.size.width - sender.value, mars.size.height - sender.value, mars.size.width - sender.value);
+    marsResized = [mars resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeTile];
+
+    self.imageView1.image = marsResized;
+    
+}
+
 - (IBAction)UIImageResizingModeChanged:(UISwitch *)sender {
     
     UIImage *mars = [UIImage imageNamed:@"Mars"];
