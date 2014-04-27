@@ -18,9 +18,20 @@
 
 #pragma mark - actions
 
+- (IBAction)UIImageResizingModeChanged:(UISwitch *)sender {
+    
+    UIImage *mars = [UIImage imageNamed:@"Mars"];
+    UIImage *marsResized;
+    
+    if(sender.on){
+        marsResized = [mars resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeTile];
+    }else{
+        marsResized = [mars resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch];
+    }
+    self.imageView1.image = marsResized;
+}
 
 - (IBAction)contentModeChanged:(UISegmentedControl *)sender {
-    
     
     NSString *contentModeDescription;
     
