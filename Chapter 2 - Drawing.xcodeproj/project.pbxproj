@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0C6DD5E190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C6DD5D190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png */; };
+		E0C6DD60190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C6DD5F190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png */; };
 		E0FDEAD5190A29C30006DE0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD4190A29C30006DE0A /* Foundation.framework */; };
 		E0FDEAD7190A29C30006DE0A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD6190A29C30006DE0A /* CoreGraphics.framework */; };
 		E0FDEAD9190A29C30006DE0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD8190A29C30006DE0A /* UIKit.framework */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E0C6DD5D190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size-with-text.png"; sourceTree = "<group>"; };
+		E0C6DD5F190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size-with-text-and-no-layers.png"; sourceTree = "<group>"; };
 		E0FDEAD1190A29C30006DE0A /* Chapter 2 - Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chapter 2 - Drawing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FDEAD4190A29C30006DE0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E0FDEAD6190A29C30006DE0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -138,6 +142,8 @@
 				E0FDEAE4190A29C30006DE0A /* AppDelegate.m */,
 				E0FDEAE6190A29C30006DE0A /* Main_iPhone.storyboard */,
 				E0FDEAE9190A29C30006DE0A /* Main_iPad.storyboard */,
+				E0C6DD5F190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png */,
+				E0C6DD5D190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png */,
 				E0FEBAF6190B78EB008DB40D /* wheelchair-girl-two-thirds-size-gray.png */,
 				E0FEBAF4190B7786008DB40D /* wheelchair-girl-two-thirds-size-transparent.png */,
 				E0FDEB14190A4E690006DE0A /* 396px-Mona_Lisa.png */,
@@ -264,11 +270,13 @@
 				E0FDEB15190A4E690006DE0A /* 396px-Mona_Lisa.png in Resources */,
 				E0FDEAEB190A29C30006DE0A /* Main_iPad.storyboard in Resources */,
 				E0FEBAF5190B7786008DB40D /* wheelchair-girl-two-thirds-size-transparent.png in Resources */,
+				E0C6DD5E190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png in Resources */,
 				E0FEBAF1190B59A0008DB40D /* wheelchair-girl-two-thirds-size.png in Resources */,
 				E0FDEB0D190A3F130006DE0A /* smileyiPhone.png in Resources */,
 				E0FDEAF0190A29C30006DE0A /* Images.xcassets in Resources */,
 				E0FEBAEB190B5717008DB40D /* wheelchair-girl.png in Resources */,
 				E0FDEAE8190A29C30006DE0A /* Main_iPhone.storyboard in Resources */,
+				E0C6DD60190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png in Resources */,
 				E0FDEADF190A29C30006DE0A /* InfoPlist.strings in Resources */,
 				E0FEBAED190B58C0008DB40D /* wheelchair-girl-one-third-size.png in Resources */,
 			);

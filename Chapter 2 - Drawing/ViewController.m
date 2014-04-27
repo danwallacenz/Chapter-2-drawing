@@ -86,41 +86,20 @@
     }
 }
 - (IBAction)transparentImageChange:(UISwitch *)sender {
-    
     self.useTransparentImages = sender.on;
     [self setImage];
-    
-    
-//    if(self.currentImage == self.transparentImage){
-//        self.currentImage = self.opaqueImage;
-//    }else{
-//        self.currentImage = self.transparentImage;
-//    }
-//    self.theImageView.image = self.currentImage;
 }
 
 - (IBAction)templateImagesChanged:(UISwitch *)sender {
-//    if (sender.on) {
-//        self.useTransparentImages = YES;
-//    }else{
-//        self.useTransparentImages = NO;
-//    }
-    
     self.useTemplateImages = sender.on;
     [self setImage];
-        
-//        if (self.currentImage == self.opaqueImage) {
-//            self.theImageView.image = self.opaqueImageTemplate;
-//        }else{
-//            self.theImageView.image = self.transparentImageTemplate;
-//        }
-//    }else{
-//        if (self.currentImage == self.opaqueImageTemplate) {
-//            self.theImageView.image = self.opaqueImage;
-//        }else{
-//            self.theImageView.image = self.transparentImage;
-//        }
-//    }
+}
+- (IBAction)mainViewOpacityChanged:(UISlider *)sender {
+    self.view.backgroundColor = [self.view.backgroundColor colorWithAlphaComponent: sender.value];
+}
+- (IBAction)imageViewOpacityChanged:(UISlider *)sender {
+    self.theImageView.backgroundColor = [self.theImageView.backgroundColor colorWithAlphaComponent: sender.value];
+
 }
 
 -(void) setImage
@@ -202,11 +181,8 @@
     self.transparentImage = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size-transparent.png"];
     self.transparentImageTemplate = [self.transparentImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
-    self.opaqueImage = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size.png"];
+    self.opaqueImage = [UIImage imageNamed: @"wheelchair-girl-two-thirds-size-with-text-and-no-layers.png"];
     self.opaqueImageTemplate = [self.transparentImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    
-
-
     
     self.opaqueLabel.text = self.theImageView.opaque == YES?@"yes":@"no";
     [self.opaqueSwitch setOn:self.theImageView.opaque animated:YES];
