@@ -9,8 +9,14 @@
 #import "ResizableImagesViewController.h"
 
 @interface ResizableImagesViewController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *imageView1;
 @property (weak, nonatomic) IBOutlet UILabel *UIContentModeStatusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *boundsHeightLabel;
+@property (weak, nonatomic) IBOutlet UILabel *boundsWidthLabel;
+
+@property (weak, nonatomic) IBOutlet UISlider *heightSlider;
+@property (weak, nonatomic) IBOutlet UISlider *widthSlider;
 
 @end
 
@@ -43,7 +49,8 @@
     self.imageView1.image = marsResized;
 }
 
-- (IBAction)contentModeChanged:(UISegmentedControl *)sender {
+- (IBAction)contentModeChanged:(UISegmentedControl *)sender
+{
     
     NSString *contentModeDescription;
     
@@ -106,7 +113,34 @@
     [self.view setNeedsDisplayInRect: self.imageView1.bounds];
 }
 
+/*
+ 
+ - (IBAction)widthChanged:(UISlider *)sender {
+ 
+ self.theImageView.bounds = CGRectMake(0, 0, sender.value, self.heightSlider.value);
+ self.boundsWidthLabel.text = [NSString stringWithFormat:@"w: %f", sender.value];
+ }
+ 
+ - (IBAction)heightChanged:(UISlider *)sender {
+ 
+ self.theImageView.bounds = CGRectMake(0, 0,  self.widthSlider.value, sender.value);
+ self.boundsHeightLabel.text = [NSString stringWithFormat:@"h: %f",   sender.value];
+ 
+ }
+ 
+ */
 
+- (IBAction)boundsHeightChanged:(UISlider *)sender
+{
+    self.imageView1.bounds = CGRectMake(0, 0,  self.widthSlider.value, sender.value);
+    self.boundsHeightLabel.text = [NSString stringWithFormat:@"h: %f", sender.value];
+}
+
+- (IBAction)boundsWidthChanged:(UISlider *)sender
+{
+    self.imageView1.bounds = CGRectMake(0, 0, sender.value, self.heightSlider.value);
+    self.boundsWidthLabel.text = [NSString stringWithFormat:@"w: %f", sender.value];
+}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
