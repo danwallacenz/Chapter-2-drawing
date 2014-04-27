@@ -10,10 +10,81 @@
 
 @interface ResizableImagesViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView1;
+@property (weak, nonatomic) IBOutlet UILabel *UIContentModeStatusLabel;
 
 @end
 
 @implementation ResizableImagesViewController
+
+#pragma mark - actions
+
+
+- (IBAction)contentModeChanged:(UISegmentedControl *)sender {
+    
+    
+    NSString *contentModeDescription;
+    
+    long selectedIndex = sender.selectedSegmentIndex;
+    switch (selectedIndex) {
+        case 0:
+            self.imageView1.contentMode = UIViewContentModeScaleToFill;
+            contentModeDescription = @"UIViewContentModeScaleToFill";
+            break;
+        case 1:
+            self.imageView1.contentMode = UIViewContentModeScaleAspectFit;
+            contentModeDescription = @"UIViewContentModeScaleAspectFit";
+            break;
+        case 2:
+            self.imageView1.contentMode = UIViewContentModeScaleAspectFill;
+            contentModeDescription = @"UIViewContentModeScaleAspectFill";
+            break;
+        case 3:
+            self.imageView1.contentMode = UIViewContentModeCenter;
+            contentModeDescription = @"UIViewContentModeCenter";
+            break;
+        case 4:
+            self.imageView1.contentMode = UIViewContentModeTop;
+            contentModeDescription = @"UIViewContentModeTop";
+            break;
+        case 5:
+            self.imageView1.contentMode = UIViewContentModeBottom;
+            contentModeDescription = @"UIViewContentModeBottom";
+            break;
+        case 6:
+            self.imageView1.contentMode = UIViewContentModeLeft;
+            contentModeDescription = @"UIViewContentModeLeft";
+            break;
+        case 7:
+            self.imageView1.contentMode = UIViewContentModeRight;
+            contentModeDescription = @"UIViewContentModeRight";
+            break;
+        case 8:
+            self.imageView1.contentMode = UIViewContentModeTopLeft;
+            contentModeDescription = @"UIViewContentModeTopLeft";
+            break;
+        case 9:
+            self.imageView1.contentMode = UIViewContentModeTopRight;
+            contentModeDescription = @"UIViewContentModeTopRight";
+            break;
+        case 10:
+            self.imageView1.contentMode = UIViewContentModeBottomLeft;
+            contentModeDescription = @"UIViewContentModeBottomLeft";
+            break;
+        case 11:
+            self.imageView1.contentMode = UIViewContentModeBottomRight;
+            contentModeDescription = @"UIViewContentModeBottomRight";
+            break;
+            
+        default:
+            break;
+    }
+    self.UIContentModeStatusLabel.text = contentModeDescription;
+    
+    [self.view setNeedsDisplayInRect: self.imageView1.bounds];
+}
+
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
