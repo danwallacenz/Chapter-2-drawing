@@ -17,6 +17,9 @@
 
 @property (weak, nonatomic) IBOutlet UISlider *heightSlider;
 @property (weak, nonatomic) IBOutlet UISlider *widthSlider;
+@property (weak, nonatomic) IBOutlet UILabel *imageHeightLabel;
+@property (weak, nonatomic) IBOutlet UILabel *imageWidthLabel;
+@property (weak, nonatomic) IBOutlet UILabel *capInsetsValueLabel;
 
 @end
 
@@ -33,6 +36,8 @@
     marsResized = [mars resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeTile];
 
     self.imageView1.image = marsResized;
+    
+    self.capInsetsValueLabel.text = [NSString stringWithFormat:@"%f",sender.value];
     
 }
 
@@ -164,6 +169,9 @@
     UIImage *mars = [UIImage imageNamed:@"Mars"];
     UIImage *marsTiled = [mars resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeTile];
     self.imageView1.image = marsTiled;
+    
+    self.imageHeightLabel.text = [NSString stringWithFormat:@"%f", mars.size.height];
+    self.imageWidthLabel.text = [NSString stringWithFormat:@"%f", mars.size.width];
     
 }
 
