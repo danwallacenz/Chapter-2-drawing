@@ -27,6 +27,11 @@
 
 #pragma mark - actions
 
+- (IBAction)clipsToBoundsChanged:(UISwitch *)sender {
+    self.imageView1.clipsToBounds = !self.imageView1.clipsToBounds;
+}
+
+
 
 - (IBAction)capInsetsChanged:(UISlider *)sender {
     UIImage *mars = [UIImage imageNamed:@"Mars"];
