@@ -408,15 +408,15 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Yu4-AO-4ew"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIKit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTH-lV-4cm">
-                                <rect key="frame" x="20" y="128" width="100" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIKit drawRect:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTH-lV-4cm">
+                                <rect key="frame" x="20" y="128" width="121" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOH-Xg-BoE">
-                                <rect key="frame" x="128" y="20" width="100" height="100"/>
+                                <rect key="frame" x="151" y="20" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70663207120000004" green="0.74729128649999998" blue="0.34306569339999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -425,7 +425,18 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Context" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SO-ys-OXV">
-                                <rect key="frame" x="128" y="128" width="123" height="21"/>
+                                <rect key="frame" x="151" y="128" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Z5-CC-hmE">
+                                <rect key="frame" x="20" y="157" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41349224449999999" green="0.57647058819999997" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UIKit drawLayer: inContext:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crB-yN-iyB">
+                                <rect key="frame" x="20" y="265" width="211" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -440,8 +451,7 @@
                             <constraint firstItem="YOH-Xg-BoE" firstAttribute="top" secondItem="96I-md-QkH" secondAttribute="bottom" id="Fu1-K2-FUE"/>
                             <constraint firstItem="vjY-7Q-q15" firstAttribute="top" secondItem="gck-wX-CWy" secondAttribute="bottom" constant="20" id="H6O-Wu-vUk"/>
                             <constraint firstItem="ZTH-lV-4cm" firstAttribute="leading" secondItem="zIE-zc-fVZ" secondAttribute="leading" constant="20" id="SeV-c5-rHR"/>
-                            <constraint firstItem="ZTH-lV-4cm" firstAttribute="trailing" secondItem="0pV-4n-eqQ" secondAttribute="trailing" id="X60-uQ-z4v"/>
-                            <constraint firstItem="YOH-Xg-BoE" firstAttribute="leading" secondItem="0pV-4n-eqQ" secondAttribute="trailing" constant="8" id="ddS-MT-59Z"/>
+                            <constraint firstItem="YOH-Xg-BoE" firstAttribute="leading" secondItem="0pV-4n-eqQ" secondAttribute="trailing" constant="31" id="ddS-MT-59Z"/>
                             <constraint firstItem="0pV-4n-eqQ" firstAttribute="leading" secondItem="zIE-zc-fVZ" secondAttribute="leading" constant="20" id="gPl-xp-7yO"/>
                             <constraint firstAttribute="trailing" secondItem="gck-wX-CWy" secondAttribute="trailing" constant="20" id="nt5-So-Azz"/>
                         </constraints>
@@ -451,6 +461,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="blueCircleContainerViewUIKit" destination="0pV-4n-eqQ" id="nha-q2-kcY"/>
+                        <outlet property="greenCircleContainerViewUIKitLayer" destination="0Z5-CC-hmE" id="pPU-vs-yqU"/>
                         <outlet property="redCircleContainerViewCoreGraphics" destination="YOH-Xg-BoE" id="Gqa-mh-74R"/>
                     </connections>
                 </viewController>
