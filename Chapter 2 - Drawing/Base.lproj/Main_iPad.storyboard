@@ -415,6 +415,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOH-Xg-BoE">
+                                <rect key="frame" x="128" y="20" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70663207120000004" green="0.74729128649999998" blue="0.34306569339999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fLs-wn-kOH"/>
+                                    <constraint firstAttribute="width" constant="100" id="h1M-4D-sbi"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Context" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SO-ys-OXV">
+                                <rect key="frame" x="128" y="128" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -422,9 +437,11 @@
                             <constraint firstItem="gck-wX-CWy" firstAttribute="top" secondItem="96I-md-QkH" secondAttribute="bottom" id="4Ny-1Q-vz3"/>
                             <constraint firstItem="0pV-4n-eqQ" firstAttribute="top" secondItem="96I-md-QkH" secondAttribute="bottom" id="7aR-eL-gGx"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gck-wX-CWy" secondAttribute="trailing" constant="20" id="BTN-Tt-NhR"/>
+                            <constraint firstItem="YOH-Xg-BoE" firstAttribute="top" secondItem="96I-md-QkH" secondAttribute="bottom" id="Fu1-K2-FUE"/>
                             <constraint firstItem="vjY-7Q-q15" firstAttribute="top" secondItem="gck-wX-CWy" secondAttribute="bottom" constant="20" id="H6O-Wu-vUk"/>
                             <constraint firstItem="ZTH-lV-4cm" firstAttribute="leading" secondItem="zIE-zc-fVZ" secondAttribute="leading" constant="20" id="SeV-c5-rHR"/>
                             <constraint firstItem="ZTH-lV-4cm" firstAttribute="trailing" secondItem="0pV-4n-eqQ" secondAttribute="trailing" id="X60-uQ-z4v"/>
+                            <constraint firstItem="YOH-Xg-BoE" firstAttribute="leading" secondItem="0pV-4n-eqQ" secondAttribute="trailing" constant="8" id="ddS-MT-59Z"/>
                             <constraint firstItem="0pV-4n-eqQ" firstAttribute="leading" secondItem="zIE-zc-fVZ" secondAttribute="leading" constant="20" id="gPl-xp-7yO"/>
                             <constraint firstAttribute="trailing" secondItem="gck-wX-CWy" secondAttribute="trailing" constant="20" id="nt5-So-Azz"/>
                         </constraints>
@@ -433,7 +450,8 @@
                     <tabBarItem key="tabBarItem" title="Context Images" id="WMt-AA-Acd"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="blueCircleContainerView" destination="0pV-4n-eqQ" id="9DO-Zn-iZH"/>
+                        <outlet property="blueCircleContainerViewUIKit" destination="0pV-4n-eqQ" id="nha-q2-kcY"/>
+                        <outlet property="redCircleContainerViewCoreGraphics" destination="YOH-Xg-BoE" id="Gqa-mh-74R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZN-7J-6VG" userLabel="First Responder" sceneMemberID="firstResponder"/>

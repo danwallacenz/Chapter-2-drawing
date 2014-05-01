@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BlueCircleView : UIView
+@interface BlueCircleViewUIKit : UIView
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Daniel Wallace [DATACOM]. All rights reserved.
 //
 
-#import "BlueCircleView.h"
+#import "BlueCircleViewUIKit.h"
 
-@implementation BlueCircleView
+@implementation BlueCircleViewUIKit
 
 - (id)initWithFrame:(CGRect)frame
 {

@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E01FB12419120FBC00229340 /* GraphicsContextImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E01FB12319120FBC00229340 /* GraphicsContextImagesViewController.m */; };
-		E01FB127191211FD00229340 /* BlueCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E01FB126191211FD00229340 /* BlueCircleView.m */; };
+		E01FB127191211FD00229340 /* BlueCircleViewUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E01FB126191211FD00229340 /* BlueCircleViewUIKit.m */; };
+		E01FB12C19121F3200229340 /* RedCircleViewCoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = E01FB12B19121F3200229340 /* RedCircleViewCoreGraphics.m */; };
 		E0C6DD5E190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C6DD5D190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png */; };
 		E0C6DD60190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C6DD5F190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png */; };
 		E0C6DD63190C8685002FC62F /* ResizableImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DD62190C8685002FC62F /* ResizableImagesViewController.m */; };
@@ -51,8 +52,10 @@
 /* Begin PBXFileReference section */
 		E01FB12219120FBC00229340 /* GraphicsContextImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsContextImagesViewController.h; sourceTree = "<group>"; };
 		E01FB12319120FBC00229340 /* GraphicsContextImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicsContextImagesViewController.m; sourceTree = "<group>"; };
-		E01FB125191211FD00229340 /* BlueCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCircleView.h; sourceTree = "<group>"; };
-		E01FB126191211FD00229340 /* BlueCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCircleView.m; sourceTree = "<group>"; };
+		E01FB125191211FD00229340 /* BlueCircleViewUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCircleViewUIKit.h; sourceTree = "<group>"; };
+		E01FB126191211FD00229340 /* BlueCircleViewUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCircleViewUIKit.m; sourceTree = "<group>"; };
+		E01FB12A19121F3200229340 /* RedCircleViewCoreGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedCircleViewCoreGraphics.h; sourceTree = "<group>"; };
+		E01FB12B19121F3200229340 /* RedCircleViewCoreGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedCircleViewCoreGraphics.m; sourceTree = "<group>"; };
 		E0C6DD5D190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size-with-text.png"; sourceTree = "<group>"; };
 		E0C6DD5F190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size-with-text-and-no-layers.png"; sourceTree = "<group>"; };
 		E0C6DD61190C8685002FC62F /* ResizableImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizableImagesViewController.h; sourceTree = "<group>"; };
@@ -182,8 +185,10 @@
 				E0FDEAE4190A29C30006DE0A /* AppDelegate.m */,
 				E0FDEAE6190A29C30006DE0A /* Main_iPhone.storyboard */,
 				E0FDEAE9190A29C30006DE0A /* Main_iPad.storyboard */,
-				E01FB125191211FD00229340 /* BlueCircleView.h */,
-				E01FB126191211FD00229340 /* BlueCircleView.m */,
+				E01FB12A19121F3200229340 /* RedCircleViewCoreGraphics.h */,
+				E01FB12B19121F3200229340 /* RedCircleViewCoreGraphics.m */,
+				E01FB125191211FD00229340 /* BlueCircleViewUIKit.h */,
+				E01FB126191211FD00229340 /* BlueCircleViewUIKit.m */,
 				E01FB129191212DB00229340 /* images */,
 				E0FDEAEF190A29C30006DE0A /* Images.xcassets */,
 				E0FDEADB190A29C30006DE0A /* Supporting Files */,
@@ -328,11 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E01FB127191211FD00229340 /* BlueCircleView.m in Sources */,
+				E01FB127191211FD00229340 /* BlueCircleViewUIKit.m in Sources */,
 				E01FB12419120FBC00229340 /* GraphicsContextImagesViewController.m in Sources */,
 				E0C6DD63190C8685002FC62F /* ResizableImagesViewController.m in Sources */,
 				E0FDEAEE190A29C30006DE0A /* ViewController.m in Sources */,
 				E0FDEAE5190A29C30006DE0A /* AppDelegate.m in Sources */,
+				E01FB12C19121F3200229340 /* RedCircleViewCoreGraphics.m in Sources */,
 				E0FDEAE1190A29C30006DE0A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
