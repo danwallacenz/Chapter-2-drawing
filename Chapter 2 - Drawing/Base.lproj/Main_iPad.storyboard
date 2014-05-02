@@ -453,6 +453,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-jF-GWi">
+                                <rect key="frame" x="350" y="20" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93521897809999999" green="0.92903170619999997" blue="0.93419251820000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="WYR-Ea-Fkg"/>
+                                    <constraint firstAttribute="height" constant="200" id="YBB-ij-vlM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="create and save a UIImage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smF-ld-I4x">
+                                <rect key="frame" x="350" y="228" width="205" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -466,6 +481,8 @@
                             <constraint firstItem="YOH-Xg-BoE" firstAttribute="leading" secondItem="0pV-4n-eqQ" secondAttribute="trailing" constant="31" id="ddS-MT-59Z"/>
                             <constraint firstItem="0pV-4n-eqQ" firstAttribute="leading" secondItem="zIE-zc-fVZ" secondAttribute="leading" constant="20" id="gPl-xp-7yO"/>
                             <constraint firstAttribute="trailing" secondItem="gck-wX-CWy" secondAttribute="trailing" constant="20" id="nt5-So-Azz"/>
+                            <constraint firstItem="Mlb-jF-GWi" firstAttribute="top" secondItem="96I-md-QkH" secondAttribute="bottom" id="r2v-aA-3nU"/>
+                            <constraint firstItem="gck-wX-CWy" firstAttribute="leading" secondItem="Mlb-jF-GWi" secondAttribute="trailing" constant="54" id="rgF-Qb-WV3"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -474,6 +491,7 @@
                     <connections>
                         <outlet property="blueCircleContainerViewUIKit" destination="0pV-4n-eqQ" id="nha-q2-kcY"/>
                         <outlet property="greenCircleContainerViewUIKitLayer" destination="0Z5-CC-hmE" id="pPU-vs-yqU"/>
+                        <outlet property="orangeCircleUIImageimageView" destination="Mlb-jF-GWi" id="K2D-mg-y4o"/>
                         <outlet property="redCircleContainerViewCoreGraphics" destination="YOH-Xg-BoE" id="Gqa-mh-74R"/>
                         <outlet property="yellowCircleContainerCGLayer" destination="gES-86-Oip" id="0sQ-KH-yhe"/>
                     </connections>

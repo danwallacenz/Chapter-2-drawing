@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIView *redCircleContainerViewCoreGraphics;
 @property (weak, nonatomic) IBOutlet UIView *greenCircleContainerViewUIKitLayer;
 @property (weak, nonatomic) IBOutlet UIView *yellowCircleContainerCGLayer;
+@property (weak, nonatomic) IBOutlet UIImageView *orangeCircleUIImageimageView;
+@property (strong, nonatomic) UIImage *orangeCircleImage;
 
 @end
 
@@ -41,7 +43,7 @@
     blueCircleView.opaque = NO;
     [self.blueCircleContainerViewUIKit addSubview: blueCircleView];
     
-    // UIKit blue circle
+    // CG blue circle
     RedCircleViewCoreGraphics *redCircleView = [[RedCircleViewCoreGraphics alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     redCircleView.opaque = NO;
     [self.redCircleContainerViewCoreGraphics addSubview: redCircleView];
@@ -51,9 +53,27 @@
     greenCircleView.opaque = NO;
     [self.greenCircleContainerViewUIKitLayer addSubview: greenCircleView];
  
+     // CG yellow circle
     YellowCircleCoreGraphicsLayer *yellowCircleView = [[YellowCircleCoreGraphicsLayer alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     yellowCircleView.opaque = NO;
     [self.yellowCircleContainerCGLayer addSubview: yellowCircleView];
+    
+    self.orangeCircleImage = [self drawOrangeCircleImage];
+    
+    [self.orangeCircleUIImageimageView setContentMode:UIViewContentModeCenter];
+    [self.orangeCircleUIImageimageView setImage:self.orangeCircleImage];
+    
+}
+
+- (UIImage *) drawOrangeCircleImage
+{
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(100, 100), NO, 0);
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0,0,100,100)];
+    [[UIColor orangeColor] setFill];
+    [path fill];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 - (void)didReceiveMemoryWarning
