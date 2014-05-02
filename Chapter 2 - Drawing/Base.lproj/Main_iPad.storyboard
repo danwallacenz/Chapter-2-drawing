@@ -392,6 +392,29 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gck-wX-CWy">
                                 <rect key="frame" x="604" y="20" width="400" height="679"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rIA-kA-pb2">
+                                        <rect key="frame" x="20" y="20" width="360" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="Sc Fill"/>
+                                            <segment title="FIt"/>
+                                            <segment title="A Fill"/>
+                                            <segment title="⦿"/>
+                                            <segment title="⬆︎"/>
+                                            <segment title="⬇︎"/>
+                                            <segment title="⬅︎"/>
+                                            <segment title="➡︎"/>
+                                            <segment title="↖︎"/>
+                                            <segment title=" ➚"/>
+                                            <segment title=" ⇙"/>
+                                            <segment title="➘"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="UIViewContentModeChanged:" destination="2B5-e5-6sF" eventType="valueChanged" id="SHL-aB-OzK"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="c5Y-k2-FUo"/>
@@ -463,7 +486,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJt-vk-x7I">
-                                <rect key="frame" x="350" y="257" width="200" height="200"/>
+                                <rect key="frame" x="350" y="257" width="200" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93521897809999999" green="0.92903170619999997" blue="0.93419251820000004" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>

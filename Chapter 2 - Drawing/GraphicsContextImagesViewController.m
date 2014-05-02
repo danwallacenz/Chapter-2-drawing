@@ -25,6 +25,55 @@
 
 @implementation GraphicsContextImagesViewController
 
+#pragma  actions
+
+- (IBAction)UIViewContentModeChanged:(UISegmentedControl *)sender {
+    long selectedIndex = sender.selectedSegmentIndex;
+    switch (selectedIndex) {
+        case 0:
+            self.secondOrangeCircleUIImageimageView.contentMode = UIViewContentModeScaleToFill;
+            break;
+        case 1:
+            self.secondOrangeCircleUIImageimageView.contentMode = UIViewContentModeScaleAspectFit;
+            break;
+        case 2:
+            self.secondOrangeCircleUIImageimageView.contentMode = UIViewContentModeScaleAspectFill;
+            break;
+        case 3:
+            self.secondOrangeCircleUIImageimageView.contentMode = UIViewContentModeCenter;
+            break;
+        case 4:
+            self.secondOrangeCircleUIImageimageView.contentMode = UIViewContentModeTop;
+            break;
+        case 5:
+            self.secondOrangeCircleUIImageimageView.contentMode = UIViewContentModeBottom;
+            break;
+        case 6:
+            self.secondOrangeCircleUIImageimageView.contentMode = UIViewContentModeLeft;
+            break;
+        case 7:
+            self.secondOrangeCircleUIImageimageView.contentMode = UIViewContentModeRight;
+            break;
+        case 8:
+            self.secondOrangeCircleUIImageimageView.contentMode = UIViewContentModeTopLeft;
+            break;
+        case 9:
+            self.secondOrangeCircleUIImageimageView.contentMode = UIViewContentModeTopRight;
+            break;
+        case 10:
+            self.secondOrangeCircleUIImageimageView.contentMode = UIViewContentModeBottomLeft;
+            break;
+        case 11:
+            self.secondOrangeCircleUIImageimageView.contentMode = UIViewContentModeBottomRight;
+            break;
+            
+        default:
+            break;
+    }
+}
+
+#pragma UIViewController
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -59,14 +108,16 @@
     yellowCircleView.opaque = NO;
     [self.yellowCircleContainerCGLayer addSubview: yellowCircleView];
     
+
+    // orange circles
     self.orangeCircleImage = [self drawOrangeCircleImage];
     
     [self.orangeCircleUIImageimageView setContentMode:UIViewContentModeCenter];
     [self.orangeCircleUIImageimageView setImage:self.orangeCircleImage];
     
-    [self.secondOrangeCircleUIImageimageView setImage:self.orangeCircleImage];
-
     
+    [self.secondOrangeCircleUIImageimageView setContentMode:UIViewContentModeScaleAspectFill];
+    [self.secondOrangeCircleUIImageimageView setImage:self.orangeCircleImage];
 }
 
 - (UIImage *) drawOrangeCircleImage
