@@ -21,7 +21,7 @@
 @property (strong, nonatomic) UIImage *orangeCircleImage;
 @property (weak, nonatomic) IBOutlet UIImageView *secondOrangeCircleUIImageimageView;
 @property (weak, nonatomic) IBOutlet UIImageView *brown100X200ImageView;
-
+@property (weak, nonatomic) IBOutlet UIImageView *blendImageView;
 
 @end
 
@@ -110,7 +110,6 @@
     yellowCircleView.opaque = NO;
     [self.yellowCircleContainerCGLayer addSubview: yellowCircleView];
     
-
     // orange circles
 //  200 * 200
     self.orangeCircleImage = [self createOrangeCircleImageUsingUIKit];
@@ -122,8 +121,10 @@
     [self.secondOrangeCircleUIImageimageView setContentMode:UIViewContentModeCenter];
     [self.secondOrangeCircleUIImageimageView setImage:self.orangeCircleImage];
     
-    
+    // create an image from another image by drawing the original image at two different points.
     [self.brown100X200ImageView setImage:[self createPurpleCircleImagesSideBySide]];
+    
+    [self.blendImageView setImage:[self createCircleImagesOfDifferentSizesBlended ]];
 }
 
 - (UIImage *) createOrangeCircleImageUsingUIKit
@@ -162,6 +163,25 @@
     UIGraphicsEndImageContext();
     return image;
 }
+
+- (UIImage *) createCircleImagesOfDifferentSizesBlended
+{
+    UIImage *purpleCircle = [self createPurpleCircleImageUsingCoreGraphics];
+    UIImage *orangeCircle = [self createOrangeCircleImageUsingUIKit];
+    
+    CGSize viewSize = self.blendImageView.bounds.size;
+    
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(self.blendImageView.bounds.size.width * 2, self.blendImageView.bounds.size.height * 2), NO, 0);
+    
+    [purpleCircle drawInRect:CGRectMake(0, 0, viewSize.width * 2, viewSize.height * 2)];
+    [orangeCircle drawInRect:CGRectMake(viewSize.width / 2.0, viewSize.height / 2.0 , viewSize.width, viewSize.height)
+                   blendMode:kCGBlendModeMultiply alpha:1.0];
+
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
