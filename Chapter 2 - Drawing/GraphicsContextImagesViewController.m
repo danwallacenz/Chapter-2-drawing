@@ -10,11 +10,13 @@
 #import "RedCircleViewCoreGraphics.h"
 #import "BlueCircleViewUIKit.h"
 #import "GreenCircleUIKitLayer.h"
+#import "YellowCircleCoreGraphicsLayer.h"
 
 @interface GraphicsContextImagesViewController ()
 @property (weak, nonatomic) IBOutlet UIView *blueCircleContainerViewUIKit;
 @property (weak, nonatomic) IBOutlet UIView *redCircleContainerViewCoreGraphics;
 @property (weak, nonatomic) IBOutlet UIView *greenCircleContainerViewUIKitLayer;
+@property (weak, nonatomic) IBOutlet UIView *yellowCircleContainerCGLayer;
 
 @end
 
@@ -48,7 +50,10 @@
     GreenCircleUIKitLayer *greenCircleView = [[GreenCircleUIKitLayer alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     greenCircleView.opaque = NO;
     [self.greenCircleContainerViewUIKitLayer addSubview: greenCircleView];
-    
+ 
+    YellowCircleCoreGraphicsLayer *yellowCircleView = [[YellowCircleCoreGraphicsLayer alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    yellowCircleView.opaque = NO;
+    [self.yellowCircleContainerCGLayer addSubview: yellowCircleView];
 }
 
 - (void)didReceiveMemoryWarning
