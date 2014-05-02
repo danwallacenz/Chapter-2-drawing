@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *orangeCircleUIImageimageView;
 @property (strong, nonatomic) UIImage *orangeCircleImage;
 @property (weak, nonatomic) IBOutlet UIImageView *secondOrangeCircleUIImageimageView;
+@property (weak, nonatomic) IBOutlet UIImageView *brown100X200ImageView;
+
 
 @end
 
@@ -110,22 +112,52 @@
     
 
     // orange circles
-    self.orangeCircleImage = [self drawOrangeCircleImage];
+//  200 * 200
+    self.orangeCircleImage = [self createOrangeCircleImageUsingUIKit];
     
     [self.orangeCircleUIImageimageView setContentMode:UIViewContentModeCenter];
     [self.orangeCircleUIImageimageView setImage:self.orangeCircleImage];
     
-    
-    [self.secondOrangeCircleUIImageimageView setContentMode:UIViewContentModeScaleAspectFill];
+//  200 * 400
+    [self.secondOrangeCircleUIImageimageView setContentMode:UIViewContentModeCenter];
     [self.secondOrangeCircleUIImageimageView setImage:self.orangeCircleImage];
+    
+    
+    [self.brown100X200ImageView setImage:[self createPurpleCircleImagesSideBySide]];
 }
 
-- (UIImage *) drawOrangeCircleImage
+- (UIImage *) createOrangeCircleImageUsingUIKit
 {
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(100, 100), NO, 0);
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0,0,100,100)];
     [[UIColor orangeColor] setFill];
     [path fill];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+- (UIImage *) createPurpleCircleImageUsingCoreGraphics
+{
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(100, 100), NO, 0);
+    CGContextRef con = UIGraphicsGetCurrentContext();
+    CGContextAddEllipseInRect(con, CGRectMake(0, 0, 100, 100));
+    CGContextSetFillColorWithColor(con, [UIColor purpleColor].CGColor);
+    CGContextFillPath(con);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+- (UIImage *) createPurpleCircleImagesSideBySide
+{
+    UIImage *purpleCircle = [self createPurpleCircleImageUsingCoreGraphics];
+    CGSize purpleCircleSize = purpleCircle.size;
+    
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(purpleCircleSize.width * 2, purpleCircleSize.height), NO, 0);
+    [purpleCircle drawAtPoint:CGPointMake(0, 0)];
+    [purpleCircle drawAtPoint:CGPointMake(purpleCircleSize.width, 0)];
+    
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
