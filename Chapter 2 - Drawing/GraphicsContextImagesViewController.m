@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIView *yellowCircleContainerCGLayer;
 @property (weak, nonatomic) IBOutlet UIImageView *orangeCircleUIImageimageView;
 @property (strong, nonatomic) UIImage *orangeCircleImage;
+@property (weak, nonatomic) IBOutlet UIImageView *secondOrangeCircleUIImageimageView;
 
 @end
 
@@ -62,6 +63,9 @@
     
     [self.orangeCircleUIImageimageView setContentMode:UIViewContentModeCenter];
     [self.orangeCircleUIImageimageView setImage:self.orangeCircleImage];
+    
+    [self.secondOrangeCircleUIImageimageView setImage:self.orangeCircleImage];
+
     
 }
 
