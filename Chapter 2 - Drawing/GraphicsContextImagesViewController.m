@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *secondOrangeCircleUIImageimageView;
 @property (weak, nonatomic) IBOutlet UIImageView *brown100X200ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *blendImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *halfCircleImageView;
 
 @end
 
@@ -125,6 +126,23 @@
     [self.brown100X200ImageView setImage:[self createPurpleCircleImagesSideBySide]];
     
     [self.blendImageView setImage:[self createCircleImagesOfDifferentSizesBlended ]];
+    
+    
+    
+    self.halfCircleImageView.opaque = NO;
+    [self.halfCircleImageView setImage:[self createHalfCircleWithUIGraphics]];
+    
+}
+
+- (UIImage *) createHalfCircleWithUIGraphics
+{
+    UIImage *mars = [UIImage imageNamed:@"Mars"];
+    CGSize size = mars.size;
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width/2.0, size.height), NO, 0);
+    [mars drawAtPoint:CGPointMake(-size.width/2.0, 0)];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 - (UIImage *) createOrangeCircleImageUsingUIKit

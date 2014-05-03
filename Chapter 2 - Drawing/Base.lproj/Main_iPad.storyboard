@@ -519,6 +519,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HHZ-mZ-OWw">
+                                <rect key="frame" x="151" y="568" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96532127940000001" green="1" blue="0.32301953970000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slice by drawing outside context." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="89" translatesAutoresizingMaskIntoConstraints="NO" id="Vni-bF-oO6">
+                                <rect key="frame" x="259" y="597" width="89" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -544,6 +555,7 @@
                         <outlet property="blueCircleContainerViewUIKit" destination="0pV-4n-eqQ" id="nha-q2-kcY"/>
                         <outlet property="brown100X200ImageView" destination="MlM-nA-23r" id="IIw-w1-MOH"/>
                         <outlet property="greenCircleContainerViewUIKitLayer" destination="0Z5-CC-hmE" id="pPU-vs-yqU"/>
+                        <outlet property="halfCircleImageView" destination="HHZ-mZ-OWw" id="brG-ML-hve"/>
                         <outlet property="orangeCircleUIImageimageView" destination="Mlb-jF-GWi" id="K2D-mg-y4o"/>
                         <outlet property="redCircleContainerViewCoreGraphics" destination="YOH-Xg-BoE" id="Gqa-mh-74R"/>
                         <outlet property="secondOrangeCircleUIImageimageView" destination="HJt-vk-x7I" id="CUB-DE-7bR"/>
