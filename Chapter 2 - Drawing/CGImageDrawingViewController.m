@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *splitCGImageFlippedCorrectlyImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *anyResolutionImageSplitInHalfAndCompensatedForFlippingImageView;
 
+@property (weak, nonatomic) IBOutlet UIImageView *anyResolutionCorrectedByWrappingInAUIImage;
 @end
 
 @implementation CGImageDrawingViewController
@@ -39,6 +40,9 @@
     
     UIImage *anyResolutionImageSplitInHalfAndCompensatedForFlipping = [self createAnyResolutionImageSplitInHalfAndCompensatedForFlipping];
     [self.anyResolutionImageSplitInHalfAndCompensatedForFlippingImageView setImage:anyResolutionImageSplitInHalfAndCompensatedForFlipping];
+    
+    UIImage * anyResolutionImageSplitInHalfAndCompensatedForFlippingByWrappingCGImageInUIImage = [self anyResolutionImageSplitInHalfAndCompensatedForFlippingByWrappingCGImageInUIImage];
+    [self.anyResolutionCorrectedByWrappingInAUIImage setImage: anyResolutionImageSplitInHalfAndCompensatedForFlippingByWrappingCGImageInUIImage];
 }
 
 - (UIImage *)createImageSplitInHalfAndFlipped
@@ -131,6 +135,35 @@
                        flip(marsLeft));
     CGContextDrawImage(con, CGRectMake(sz.width,0,sz.width/2.0,sz.height),
                        flip(marsRight));
+    UIImage* im = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    CGImageRelease(marsLeft); CGImageRelease(marsRight);
+    return im;
+}
+
+- (UIImage *)anyResolutionImageSplitInHalfAndCompensatedForFlippingByWrappingCGImageInUIImage
+{
+    UIImage *mars = [UIImage imageNamed:@"Mars"];
+    CGSize sz = mars.size;
+    // Derive CGImage and use its dimensions to extract its halves
+    CGImageRef marsCG = [mars CGImage];
+    CGSize szCG = CGSizeMake(CGImageGetWidth(marsCG), CGImageGetHeight(marsCG));
+    CGImageRef marsLeft =
+    CGImageCreateWithImageInRect(
+                                 marsCG, CGRectMake(0,0,szCG.width/2.0,szCG.height));
+    CGImageRef marsRight =
+    CGImageCreateWithImageInRect(
+                                 marsCG, CGRectMake(szCG.width/2.0,0,szCG.width/2.0,szCG.height));
+    UIGraphicsBeginImageContextWithOptions(
+                                           CGSizeMake(sz.width*1.5, sz.height), NO, 0);
+    [[UIImage imageWithCGImage:marsLeft
+                         scale:mars.scale
+                   orientation:UIImageOrientationUp]
+     drawAtPoint:CGPointMake(0,0)];
+    [[UIImage imageWithCGImage:marsRight
+                         scale:mars.scale
+                   orientation:UIImageOrientationUp]
+     drawAtPoint:CGPointMake(sz.width,0)];
     UIImage* im = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     CGImageRelease(marsLeft); CGImageRelease(marsRight);

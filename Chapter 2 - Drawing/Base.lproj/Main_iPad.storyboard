@@ -611,6 +611,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="See page 66" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xU-cd-p8I">
+                                <rect key="frame" x="20" y="650" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MhJ-Nf-XRn">
+                                <rect key="frame" x="604" y="457" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Any resolution image split in half and compensated for flipping by wrapping CGImage in a UIImage" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="400" translatesAutoresizingMaskIntoConstraints="NO" id="HFG-Xs-YWD">
+                                <rect key="frame" x="604" y="593" width="400" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -618,6 +634,7 @@
                     <tabBarItem key="tabBarItem" title="CGImage Drawing" id="5aJ-EL-hY5"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="anyResolutionCorrectedByWrappingInAUIImage" destination="MhJ-Nf-XRn" id="Vas-T0-gCD"/>
                         <outlet property="anyResolutionImageSplitInHalfAndCompensatedForFlippingImageView" destination="Pfp-3k-4LV" id="juH-FZ-7am"/>
                         <outlet property="splitCGImageFlippedCorrectlyImageView" destination="Wbf-5V-1f0" id="p5w-yd-agu"/>
                         <outlet property="splitCGImageView" destination="kyX-HY-984" id="vMz-d5-iE3"/>
