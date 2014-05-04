@@ -66,7 +66,8 @@
     snapshotImageView = [snapshotImageView resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch];
     
     [self.snapshotImageView setImage: snapshotImageView];
-    
+    // rotate the image
+    self.snapshotImageView.transform = CGAffineTransformMakeRotation(90 * M_PI/180.0);
 }
 
 - (UIImage *)createSnapshot
@@ -74,7 +75,7 @@
     UIView *snapshotView = self.view.window;
     
     UIGraphicsBeginImageContextWithOptions(snapshotView.frame.size, YES, 0);
-    [snapshotView drawViewHierarchyInRect:self.splitCGImageView.frame afterScreenUpdates: NO];
+    [snapshotView drawViewHierarchyInRect:snapshotView.frame afterScreenUpdates: NO];
     UIImage *im = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
