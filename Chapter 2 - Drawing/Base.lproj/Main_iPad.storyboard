@@ -682,20 +682,21 @@
                                     <constraint firstAttribute="width" constant="300" id="BgP-yN-L7O"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USj-N8-0Bh">
-                                <rect key="frame" x="20" y="20" width="676" height="655"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0gc-TR-AAG">
+                                <rect key="frame" x="20" y="20" width="265" height="385"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="GiI-CA-MrR"/>
+                                    <constraint firstAttribute="height" constant="385" id="cct-4G-M5b"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="USj-N8-0Bh" firstAttribute="top" secondItem="6TC-ly-hIs" secondAttribute="bottom" id="7Xg-ig-pPE"/>
-                            <constraint firstItem="USj-N8-0Bh" firstAttribute="leading" secondItem="GM8-DU-rPs" secondAttribute="leading" constant="20" id="FFG-eg-tbL"/>
+                            <constraint firstItem="0gc-TR-AAG" firstAttribute="leading" secondItem="GM8-DU-rPs" secondAttribute="leading" constant="20" id="8KA-eg-bDG"/>
                             <constraint firstAttribute="trailing" secondItem="MP0-ws-vGx" secondAttribute="trailing" constant="20" id="Hri-Mp-VQG"/>
-                            <constraint firstItem="MP0-ws-vGx" firstAttribute="bottom" secondItem="USj-N8-0Bh" secondAttribute="bottom" id="L5b-II-niU"/>
                             <constraint firstItem="C2g-ks-Sj6" firstAttribute="top" secondItem="MP0-ws-vGx" secondAttribute="bottom" constant="44" id="g4C-Zz-REC"/>
-                            <constraint firstItem="MP0-ws-vGx" firstAttribute="leading" secondItem="USj-N8-0Bh" secondAttribute="trailing" constant="8" id="gke-b3-E1g"/>
+                            <constraint firstItem="0gc-TR-AAG" firstAttribute="top" secondItem="6TC-ly-hIs" secondAttribute="bottom" id="iiH-oB-ZCB"/>
                             <constraint firstItem="MP0-ws-vGx" firstAttribute="top" secondItem="6TC-ly-hIs" secondAttribute="bottom" id="pXP-Qp-PJ6"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -703,7 +704,7 @@
                     <tabBarItem key="tabBarItem" title="Core Image" id="hNv-gX-sZ9"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="imageView" destination="USj-N8-0Bh" id="lPZ-3T-rsZ"/>
+                        <outlet property="mainImageView" destination="0gc-TR-AAG" id="Egf-AX-kce"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bhc-5f-Nxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
