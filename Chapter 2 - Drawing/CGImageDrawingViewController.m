@@ -9,11 +9,17 @@
 #import "CGImageDrawingViewController.h"
 
 @interface CGImageDrawingViewController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *splitCGImageView;
+
 @property (weak, nonatomic) IBOutlet UIImageView *splitCGImageFlippedCorrectlyImageView;
+
 @property (weak, nonatomic) IBOutlet UIImageView *anyResolutionImageSplitInHalfAndCompensatedForFlippingImageView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *anyResolutionCorrectedByWrappingInAUIImage;
+
+@property (weak, nonatomic) IBOutlet UIImageView *snapshotImageView;
+
 @end
 
 @implementation CGImageDrawingViewController
@@ -41,8 +47,38 @@
     UIImage *anyResolutionImageSplitInHalfAndCompensatedForFlipping = [self createAnyResolutionImageSplitInHalfAndCompensatedForFlipping];
     [self.anyResolutionImageSplitInHalfAndCompensatedForFlippingImageView setImage:anyResolutionImageSplitInHalfAndCompensatedForFlipping];
     
-    UIImage * anyResolutionImageSplitInHalfAndCompensatedForFlippingByWrappingCGImageInUIImage = [self anyResolutionImageSplitInHalfAndCompensatedForFlippingByWrappingCGImageInUIImage];
+    UIImage *anyResolutionImageSplitInHalfAndCompensatedForFlippingByWrappingCGImageInUIImage = [self anyResolutionImageSplitInHalfAndCompensatedForFlippingByWrappingCGImageInUIImage];
     [self.anyResolutionCorrectedByWrappingInAUIImage setImage: anyResolutionImageSplitInHalfAndCompensatedForFlippingByWrappingCGImageInUIImage];
+    
+//    UIImage *snapshotImageView = [self createSnapshot];
+//    self.snapshotImageView.opaque = NO;
+//    
+//    snapshotImageView = [snapshotImageView resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch];
+//    
+//    [self.snapshotImageView setImage: snapshotImageView];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    UIImage *snapshotImageView = [self createSnapshot];
+//    self.snapshotImageView.opaque = NO;
+    
+    snapshotImageView = [snapshotImageView resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch];
+    
+    [self.snapshotImageView setImage: snapshotImageView];
+    
+}
+
+- (UIImage *)createSnapshot
+{
+    UIView *snapshotView = self.view.window;
+    
+    UIGraphicsBeginImageContextWithOptions(snapshotView.frame.size, YES, 0);
+    [snapshotView drawViewHierarchyInRect:self.splitCGImageView.frame afterScreenUpdates: NO];
+    UIImage *im = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return im;
 }
 
 - (UIImage *)createImageSplitInHalfAndFlipped
