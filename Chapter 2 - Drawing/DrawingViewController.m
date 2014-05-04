@@ -25,6 +25,10 @@
 //    drawingView.backgroundColor  = [UIColor redColor];
     drawingView.opaque = NO; //??
     
+    drawingView.layer.masksToBounds = YES;
+    drawingView.layer.borderColor = [UIColor blackColor].CGColor;
+    drawingView.layer.borderWidth = 2;
+    
     [self.view addSubview:drawingView];
 }
 
