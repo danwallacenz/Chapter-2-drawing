@@ -736,6 +736,27 @@
             </objects>
             <point key="canvasLocation" x="5533" y="244"/>
         </scene>
+        <!--Drawing View Controller - Drawing-->
+        <scene sceneID="Sjg-BW-gYD">
+            <objects>
+                <viewController id="jEw-qL-cBc" customClass="DrawingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t4b-xb-KGA"/>
+                        <viewControllerLayoutGuide type="bottom" id="B9s-kB-bJJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Khv-Qf-1Tj">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Drawing" id="Yt2-8s-ikZ"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lg7-Dk-L4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6626" y="244"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="uw5-ye-CYN">
             <objects>
@@ -747,6 +768,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="jEw-qL-cBc" kind="relationship" relationship="viewControllers" id="W0k-Ih-gIa"/>
                         <segue destination="h94-92-XKg" kind="relationship" relationship="viewControllers" id="AYK-aX-Vp6"/>
                         <segue destination="txe-Ki-TpV" kind="relationship" relationship="viewControllers" id="bK7-dk-nBb"/>
                         <segue destination="2B5-e5-6sF" kind="relationship" relationship="viewControllers" id="b8P-mH-JOP"/>
