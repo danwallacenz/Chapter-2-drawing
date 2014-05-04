@@ -24,6 +24,22 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
+    
+    [self drawArrowUsingCoreGraphics];
+    
+    [self drawArrowUsingUIKit];
+    
+}
+
+- (void) drawArrowUsingUIKit
+{
+    // shaft of the arrow
+    UIBezierPath *p = [UIBezierPath bezierPath];
+    
+}
+
+- (void) drawArrowUsingCoreGraphics
+{
     // Drawing code
     
     // obtain the current graphics context
@@ -48,10 +64,6 @@
     CGContextAddLineToPoint(con, 110, 101);
     CGContextSetBlendMode(con, kCGBlendModeClear);
     CGContextFillPath(con);
-    
-    
-    
 }
-
 
 @end
