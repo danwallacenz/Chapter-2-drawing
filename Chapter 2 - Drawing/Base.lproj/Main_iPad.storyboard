@@ -633,7 +633,13 @@
                                 <color key="backgroundColor" red="0.8718065693" green="0.87015282849999998" blue="0.8793339416" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Window snapshot:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mou-lT-aeh">
-                                <rect key="frame" x="286" y="664" width="143" height="21"/>
+                                <rect key="frame" x="286" y="457" width="143" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="See also UIView(orUIScreen) snapshotViewAfterScreenUpdates: or resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="534" translatesAutoresizingMaskIntoConstraints="NO" id="Mp5-GZ-TAA">
+                                <rect key="frame" x="293" y="661" width="534" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
