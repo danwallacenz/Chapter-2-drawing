@@ -7,10 +7,12 @@
 //
 
 #import "CoreImageViewController.h"
+#import "VignetteFilter.h"
 
 @interface CoreImageViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *secondImageView;
 
 @end
 
@@ -29,7 +31,24 @@
 //    [self.mainImageView setImage: [UIImage imageNamed:@"396px-Mona_Lisa" ]]; // normal image
     
     [self.mainImageView setImage: [self createCIImage]];
+    [self.secondImageView setImage:[self createCIImageWithFilterSubclass]];
+}
+
+- (UIImage *) createCIImageWithFilterSubclass
+{
+    CIFilter *vig = [VignetteFilter new];
+    CIImage *coreImageInputImage = [CIImage imageWithCGImage:[UIImage imageNamed: @"396px-Mona_Lisa"].CGImage];
     
+    // apply the filter
+    [vig setValue: coreImageInputImage forKeyPath: @"inputImage"];
+    CIImage *coreImageOutputImage = vig.outputImage;
+    
+    UIGraphicsBeginImageContextWithOptions( coreImageOutputImage.extent.size, NO, 0 );
+    [[UIImage imageWithCIImage:coreImageOutputImage] drawInRect: coreImageOutputImage.extent];
+    
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return result;
 }
 
 - (UIImage *) createCIImage
