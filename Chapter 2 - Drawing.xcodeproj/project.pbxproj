@@ -65,8 +65,8 @@
 		E01FB12B19121F3200229340 /* RedCircleViewCoreGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedCircleViewCoreGraphics.m; sourceTree = "<group>"; };
 		E01FB12D191222FB00229340 /* GreenCircleUIKitLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenCircleUIKitLayer.h; sourceTree = "<group>"; };
 		E01FB12E191222FB00229340 /* GreenCircleUIKitLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenCircleUIKitLayer.m; sourceTree = "<group>"; };
-		E0B4296819161AFC00BD223E /* CoreImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreImageViewController.h; sourceTree = "<group>"; };
-		E0B4296919161AFC00BD223E /* CoreImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreImageViewController.m; sourceTree = "<group>"; };
+		E0B4296819161AFC00BD223E /* CoreImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreImageViewController.h; path = ../CoreImageViewController.h; sourceTree = "<group>"; };
+		E0B4296919161AFC00BD223E /* CoreImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreImageViewController.m; path = ../CoreImageViewController.m; sourceTree = "<group>"; };
 		E0B4296B1916288500BD223E /* VignetteFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VignetteFilter.h; sourceTree = "<group>"; };
 		E0B4296C1916288500BD223E /* VignetteFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VignetteFilter.m; sourceTree = "<group>"; };
 		E0C6DD5D190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size-with-text.png"; sourceTree = "<group>"; };
@@ -134,6 +134,10 @@
 		E01FB128191212C100229340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E009052519159B9500B7FD1E /* CGImageDrawingViewController.h */,
+				E009052619159B9500B7FD1E /* CGImageDrawingViewController.m */,
+				E0B4296819161AFC00BD223E /* CoreImageViewController.h */,
+				E0B4296919161AFC00BD223E /* CoreImageViewController.m */,
 				E0C6DD61190C8685002FC62F /* ResizableImagesViewController.h */,
 				E0C6DD62190C8685002FC62F /* ResizableImagesViewController.m */,
 				E01FB12219120FBC00229340 /* GraphicsContextImagesViewController.h */,
@@ -179,8 +183,6 @@
 		E0FDEAC8190A29C30006DE0A = {
 			isa = PBXGroup;
 			children = (
-				E0B4296819161AFC00BD223E /* CoreImageViewController.h */,
-				E0B4296919161AFC00BD223E /* CoreImageViewController.m */,
 				E0FDEADA190A29C30006DE0A /* Chapter 2 - Drawing */,
 				E0FDEAFC190A29C30006DE0A /* Chapter 2 - DrawingTests */,
 				E0FDEAD3190A29C30006DE0A /* Frameworks */,
@@ -219,8 +221,6 @@
 				E0FDEAE9190A29C30006DE0A /* Main_iPad.storyboard */,
 				E0B4296B1916288500BD223E /* VignetteFilter.h */,
 				E0B4296C1916288500BD223E /* VignetteFilter.m */,
-				E009052519159B9500B7FD1E /* CGImageDrawingViewController.h */,
-				E009052619159B9500B7FD1E /* CGImageDrawingViewController.m */,
 				E01FB1301912230400229340 /* views */,
 				E01FB129191212DB00229340 /* images */,
 				E0FDEAEF190A29C30006DE0A /* Images.xcassets */,

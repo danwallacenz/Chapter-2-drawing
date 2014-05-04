@@ -18,8 +18,6 @@
 
 @implementation CoreImageViewController
 
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -31,7 +29,14 @@
 //    [self.mainImageView setImage: [UIImage imageNamed:@"396px-Mona_Lisa" ]]; // normal image
     
     [self.mainImageView setImage: [self createCIImage]];
+
     [self.secondImageView setImage:[self createCIImageWithFilterSubclass]];
+    
+    
+    NSArray *filterNames = [CIFilter filterNamesInCategories: nil];
+    for (NSString *filterName in filterNames) {
+        NSLog(@"%@", filterName);
+    }
 }
 
 - (UIImage *) createCIImageWithFilterSubclass
