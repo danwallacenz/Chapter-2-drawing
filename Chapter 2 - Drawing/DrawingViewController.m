@@ -32,6 +32,4 @@
     [self.view addSubview:drawingView];
 }
 
-
-
 @end
