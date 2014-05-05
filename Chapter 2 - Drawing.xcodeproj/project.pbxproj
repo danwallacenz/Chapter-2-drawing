@@ -20,6 +20,7 @@
 		E0C6DD60190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C6DD5F190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png */; };
 		E0C6DD63190C8685002FC62F /* ResizableImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DD62190C8685002FC62F /* ResizableImagesViewController.m */; };
 		E0D91A5019135104003A29C5 /* YellowCircleCoreGraphicsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D91A4F19135104003A29C5 /* YellowCircleCoreGraphicsLayer.m */; };
+		E0F8B6CA19175E7900CCF311 /* DrawingViewWithClipping.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F8B6C919175E7900CCF311 /* DrawingViewWithClipping.m */; };
 		E0FDEAD5190A29C30006DE0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD4190A29C30006DE0A /* Foundation.framework */; };
 		E0FDEAD7190A29C30006DE0A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD6190A29C30006DE0A /* CoreGraphics.framework */; };
 		E0FDEAD9190A29C30006DE0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD8190A29C30006DE0A /* UIKit.framework */; };
@@ -81,6 +82,8 @@
 		E0C6DD62190C8685002FC62F /* ResizableImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizableImagesViewController.m; sourceTree = "<group>"; };
 		E0D91A4E19135104003A29C5 /* YellowCircleCoreGraphicsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowCircleCoreGraphicsLayer.h; sourceTree = "<group>"; };
 		E0D91A4F19135104003A29C5 /* YellowCircleCoreGraphicsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowCircleCoreGraphicsLayer.m; sourceTree = "<group>"; };
+		E0F8B6C819175E7900CCF311 /* DrawingViewWithClipping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewWithClipping.h; sourceTree = "<group>"; };
+		E0F8B6C919175E7900CCF311 /* DrawingViewWithClipping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewWithClipping.m; sourceTree = "<group>"; };
 		E0FDEAD1190A29C30006DE0A /* Chapter 2 - Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chapter 2 - Drawing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FDEAD4190A29C30006DE0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E0FDEAD6190A29C30006DE0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -180,6 +183,8 @@
 				E0B429721916336100BD223E /* DrawingView.m */,
 				E01FB12D191222FB00229340 /* GreenCircleUIKitLayer.h */,
 				E01FB12E191222FB00229340 /* GreenCircleUIKitLayer.m */,
+				E0F8B6C819175E7900CCF311 /* DrawingViewWithClipping.h */,
+				E0F8B6C919175E7900CCF311 /* DrawingViewWithClipping.m */,
 				E0D91A4E19135104003A29C5 /* YellowCircleCoreGraphicsLayer.h */,
 				E0D91A4F19135104003A29C5 /* YellowCircleCoreGraphicsLayer.m */,
 				E01FB12A19121F3200229340 /* RedCircleViewCoreGraphics.h */,
@@ -388,6 +393,7 @@
 				E0FDEAE5190A29C30006DE0A /* AppDelegate.m in Sources */,
 				E01FB12C19121F3200229340 /* RedCircleViewCoreGraphics.m in Sources */,
 				E0FDEAE1190A29C30006DE0A /* main.m in Sources */,
+				E0F8B6CA19175E7900CCF311 /* DrawingViewWithClipping.m in Sources */,
 				E0B4296D1916288500BD223E /* VignetteFilter.m in Sources */,
 				E0B429731916336100BD223E /* DrawingView.m in Sources */,
 			);

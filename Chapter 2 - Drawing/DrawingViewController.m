@@ -8,6 +8,7 @@
 
 #import "DrawingViewController.h"
 #import "DrawingView.h"
+#import "DrawingViewWithClipping.h"
 
 @interface DrawingViewController ()
 
@@ -26,11 +27,19 @@
 //    drawingView.backgroundColor  = [UIColor redColor];
     drawingView.opaque = NO; //??
     
-//    drawingView.layer.masksToBounds = YES;
-//    drawingView.layer.borderColor = [UIColor blackColor].CGColor;
-//    drawingView.layer.borderWidth = 2;
+    drawingView.layer.masksToBounds = YES;
+    drawingView.layer.borderColor = [UIColor redColor].CGColor;
+    drawingView.layer.borderWidth = 1;
     
     [self.view addSubview:drawingView];
+    
+    DrawingViewWithClipping *drawingViewWithClipping = [[DrawingViewWithClipping alloc] initWithFrame:CGRectMake(20, 220, 150, 100)];
+    drawingViewWithClipping.opaque = NO;
+    drawingViewWithClipping.layer.masksToBounds = YES;
+    drawingViewWithClipping.layer.borderColor = [UIColor blackColor].CGColor;
+    drawingViewWithClipping.layer.borderWidth = 2;
+    
+    [self.view addSubview: drawingViewWithClipping];
 }
 
 @end
