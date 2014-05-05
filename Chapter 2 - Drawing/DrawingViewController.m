@@ -12,6 +12,7 @@
 #import "ArrowWithGradient.h"
 #import "ArrowWithPatternedHead.h"
 #import "ArrowRotated.h"
+#import "BlueRectangleWithACornerCutOut.h"
 
 @interface DrawingViewController ()
 
@@ -69,6 +70,26 @@
     arrowRotated.layer.borderWidth = 2;
     
     [self.view addSubview: arrowRotated];
+    
+    
+    BlueRectangleWithACornerCutOut *blueRectangleWithACornerCutOut = [[BlueRectangleWithACornerCutOut alloc] initWithFrame:CGRectMake(420, 220, 100, 100)];
+//    blueRectangleWithACornerCutOut.opaque = NO;
+    blueRectangleWithACornerCutOut.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:1.0];
+//    blueRectangleWithACornerCutOut.layer.masksToBounds = YES;
+//    blueRectangleWithACornerCutOut.layer.borderColor = [UIColor blueColor].CGColor;
+//    blueRectangleWithACornerCutOut.layer.borderWidth = 2;
+    
+    [self.view addSubview: blueRectangleWithACornerCutOut];
+    
+    BlueRectangleWithACornerCutOut *blueRectangleWithACornerCutOut2 = [[BlueRectangleWithACornerCutOut alloc] initWithFrame:CGRectMake(420, 380, 100, 100)];
+//    blueRectangleWithACornerCutOut2.opaque = NO;
+    blueRectangleWithACornerCutOut2.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.99];
+//    blueRectangleWithACornerCutOut2.layer.masksToBounds = YES;
+//    blueRectangleWithACornerCutOut2.layer.borderColor = [UIColor blueColor].CGColor;
+//    blueRectangleWithACornerCutOut2.layer.borderWidth = 2;
+    
+    [self.view addSubview: blueRectangleWithACornerCutOut2];
+    
 }
 
 @end
