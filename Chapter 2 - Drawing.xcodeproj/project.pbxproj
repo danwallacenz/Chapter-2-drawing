@@ -23,6 +23,7 @@
 		E0F8B6CA19175E7900CCF311 /* ArrowWithClipping.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F8B6C919175E7900CCF311 /* ArrowWithClipping.m */; };
 		E0F8B6CD1917662200CCF311 /* ArrowWithGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F8B6CC1917662200CCF311 /* ArrowWithGradient.m */; };
 		E0F8B6D01917721300CCF311 /* ArrowWithPatternedHead.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F8B6CF1917721300CCF311 /* ArrowWithPatternedHead.m */; };
+		E0F8B6D319177A2900CCF311 /* ArrowRotated.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F8B6D219177A2900CCF311 /* ArrowRotated.m */; };
 		E0FDEAD5190A29C30006DE0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD4190A29C30006DE0A /* Foundation.framework */; };
 		E0FDEAD7190A29C30006DE0A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD6190A29C30006DE0A /* CoreGraphics.framework */; };
 		E0FDEAD9190A29C30006DE0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD8190A29C30006DE0A /* UIKit.framework */; };
@@ -90,6 +91,8 @@
 		E0F8B6CC1917662200CCF311 /* ArrowWithGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowWithGradient.m; sourceTree = "<group>"; };
 		E0F8B6CE1917721300CCF311 /* ArrowWithPatternedHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowWithPatternedHead.h; sourceTree = "<group>"; };
 		E0F8B6CF1917721300CCF311 /* ArrowWithPatternedHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowWithPatternedHead.m; sourceTree = "<group>"; };
+		E0F8B6D119177A2900CCF311 /* ArrowRotated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArrowRotated.h; path = ../ArrowRotated.h; sourceTree = "<group>"; };
+		E0F8B6D219177A2900CCF311 /* ArrowRotated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArrowRotated.m; path = ../ArrowRotated.m; sourceTree = "<group>"; };
 		E0FDEAD1190A29C30006DE0A /* Chapter 2 - Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chapter 2 - Drawing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FDEAD4190A29C30006DE0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E0FDEAD6190A29C30006DE0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -185,6 +188,8 @@
 		E01FB1301912230400229340 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				E0F8B6D119177A2900CCF311 /* ArrowRotated.h */,
+				E0F8B6D219177A2900CCF311 /* ArrowRotated.m */,
 				E0B429711916336100BD223E /* Arrow.h */,
 				E0B429721916336100BD223E /* Arrow.m */,
 				E01FB12D191222FB00229340 /* GreenCircleUIKitLayer.h */,
@@ -406,6 +411,7 @@
 				E0FDEAE1190A29C30006DE0A /* main.m in Sources */,
 				E0F8B6CA19175E7900CCF311 /* ArrowWithClipping.m in Sources */,
 				E0B4296D1916288500BD223E /* VignetteFilter.m in Sources */,
+				E0F8B6D319177A2900CCF311 /* ArrowRotated.m in Sources */,
 				E0F8B6D01917721300CCF311 /* ArrowWithPatternedHead.m in Sources */,
 				E0B429731916336100BD223E /* Arrow.m in Sources */,
 			);

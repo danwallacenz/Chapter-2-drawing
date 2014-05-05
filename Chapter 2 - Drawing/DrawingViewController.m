@@ -11,6 +11,7 @@
 #import "ArrowWithClipping.h"
 #import "ArrowWithGradient.h"
 #import "ArrowWithPatternedHead.h"
+#import "ArrowRotated.h"
 
 @interface DrawingViewController ()
 
@@ -60,6 +61,14 @@
     
     [self.view addSubview: arrowWithPatternedHead];
     
+    
+    ArrowRotated *arrowRotated = [[ArrowRotated alloc] initWithFrame:CGRectMake(420, 20, 150, 120)];
+    arrowRotated.opaque = NO;
+    arrowRotated.layer.masksToBounds = YES;
+    arrowRotated.layer.borderColor = [UIColor blueColor].CGColor;
+    arrowRotated.layer.borderWidth = 2;
+    
+    [self.view addSubview: arrowRotated];
 }
 
 @end
