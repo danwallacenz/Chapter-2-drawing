@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DrawingView : UIView
+@interface Arrow : UIView
 
 @end

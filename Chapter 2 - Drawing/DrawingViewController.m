@@ -7,8 +7,8 @@
 //
 
 #import "DrawingViewController.h"
-#import "DrawingView.h"
-#import "DrawingViewWithClipping.h"
+#import "Arrow.h"
+#import "ArrowWithClipping.h"
 
 @interface DrawingViewController ()
 
@@ -23,7 +23,7 @@
     // Do any additional setup after loading the view.
     
     
-    DrawingView *drawingView = [[DrawingView alloc] initWithFrame:CGRectMake(20, 20, 150, 100)];
+    Arrow *drawingView = [[Arrow alloc] initWithFrame:CGRectMake(20, 20, 150, 100)];
 //    drawingView.backgroundColor  = [UIColor redColor];
     drawingView.opaque = NO; //??
     
@@ -33,7 +33,7 @@
     
     [self.view addSubview:drawingView];
     
-    DrawingViewWithClipping *drawingViewWithClipping = [[DrawingViewWithClipping alloc] initWithFrame:CGRectMake(20, 220, 150, 100)];
+    ArrowWithClipping *drawingViewWithClipping = [[ArrowWithClipping alloc] initWithFrame:CGRectMake(20, 220, 150, 100)];
     drawingViewWithClipping.opaque = NO;
     drawingViewWithClipping.layer.masksToBounds = YES;
     drawingViewWithClipping.layer.borderColor = [UIColor blackColor].CGColor;

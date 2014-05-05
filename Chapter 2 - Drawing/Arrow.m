@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Daniel Wallace [DATACOM]. All rights reserved.
 //
 
-#import "DrawingView.h"
+#import "Arrow.h"
 
-@implementation DrawingView
+@implementation Arrow
 
 - (id)initWithFrame:(CGRect)frame
 {

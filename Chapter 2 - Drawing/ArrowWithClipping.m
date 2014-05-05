@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Daniel Wallace [DATACOM]. All rights reserved.
 //
 
-#import "DrawingViewWithClipping.h"
+#import "ArrowWithClipping.h"
 
-@implementation DrawingViewWithClipping
+@implementation ArrowWithClipping
 
 - (id)initWithFrame:(CGRect)frame
 {

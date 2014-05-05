@@ -15,12 +15,12 @@
 		E0B4296A19161AFC00BD223E /* CoreImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B4296919161AFC00BD223E /* CoreImageViewController.m */; };
 		E0B4296D1916288500BD223E /* VignetteFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B4296C1916288500BD223E /* VignetteFilter.m */; };
 		E0B429701916329000BD223E /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B4296F1916329000BD223E /* DrawingViewController.m */; };
-		E0B429731916336100BD223E /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B429721916336100BD223E /* DrawingView.m */; };
+		E0B429731916336100BD223E /* Arrow.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B429721916336100BD223E /* Arrow.m */; };
 		E0C6DD5E190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C6DD5D190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png */; };
 		E0C6DD60190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C6DD5F190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png */; };
 		E0C6DD63190C8685002FC62F /* ResizableImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DD62190C8685002FC62F /* ResizableImagesViewController.m */; };
 		E0D91A5019135104003A29C5 /* YellowCircleCoreGraphicsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D91A4F19135104003A29C5 /* YellowCircleCoreGraphicsLayer.m */; };
-		E0F8B6CA19175E7900CCF311 /* DrawingViewWithClipping.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F8B6C919175E7900CCF311 /* DrawingViewWithClipping.m */; };
+		E0F8B6CA19175E7900CCF311 /* ArrowWithClipping.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F8B6C919175E7900CCF311 /* ArrowWithClipping.m */; };
 		E0FDEAD5190A29C30006DE0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD4190A29C30006DE0A /* Foundation.framework */; };
 		E0FDEAD7190A29C30006DE0A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD6190A29C30006DE0A /* CoreGraphics.framework */; };
 		E0FDEAD9190A29C30006DE0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDEAD8190A29C30006DE0A /* UIKit.framework */; };
@@ -74,16 +74,16 @@
 		E0B4296C1916288500BD223E /* VignetteFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VignetteFilter.m; sourceTree = "<group>"; };
 		E0B4296E1916329000BD223E /* DrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewController.h; sourceTree = "<group>"; };
 		E0B4296F1916329000BD223E /* DrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewController.m; sourceTree = "<group>"; };
-		E0B429711916336100BD223E /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
-		E0B429721916336100BD223E /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		E0B429711916336100BD223E /* Arrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arrow.h; sourceTree = "<group>"; };
+		E0B429721916336100BD223E /* Arrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arrow.m; sourceTree = "<group>"; };
 		E0C6DD5D190C7EA6002FC62F /* wheelchair-girl-two-thirds-size-with-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size-with-text.png"; sourceTree = "<group>"; };
 		E0C6DD5F190C7FAF002FC62F /* wheelchair-girl-two-thirds-size-with-text-and-no-layers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheelchair-girl-two-thirds-size-with-text-and-no-layers.png"; sourceTree = "<group>"; };
 		E0C6DD61190C8685002FC62F /* ResizableImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizableImagesViewController.h; sourceTree = "<group>"; };
 		E0C6DD62190C8685002FC62F /* ResizableImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizableImagesViewController.m; sourceTree = "<group>"; };
 		E0D91A4E19135104003A29C5 /* YellowCircleCoreGraphicsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowCircleCoreGraphicsLayer.h; sourceTree = "<group>"; };
 		E0D91A4F19135104003A29C5 /* YellowCircleCoreGraphicsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowCircleCoreGraphicsLayer.m; sourceTree = "<group>"; };
-		E0F8B6C819175E7900CCF311 /* DrawingViewWithClipping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewWithClipping.h; sourceTree = "<group>"; };
-		E0F8B6C919175E7900CCF311 /* DrawingViewWithClipping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewWithClipping.m; sourceTree = "<group>"; };
+		E0F8B6C819175E7900CCF311 /* ArrowWithClipping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowWithClipping.h; sourceTree = "<group>"; };
+		E0F8B6C919175E7900CCF311 /* ArrowWithClipping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowWithClipping.m; sourceTree = "<group>"; };
 		E0FDEAD1190A29C30006DE0A /* Chapter 2 - Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chapter 2 - Drawing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FDEAD4190A29C30006DE0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E0FDEAD6190A29C30006DE0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -179,12 +179,12 @@
 		E01FB1301912230400229340 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				E0B429711916336100BD223E /* DrawingView.h */,
-				E0B429721916336100BD223E /* DrawingView.m */,
+				E0B429711916336100BD223E /* Arrow.h */,
+				E0B429721916336100BD223E /* Arrow.m */,
 				E01FB12D191222FB00229340 /* GreenCircleUIKitLayer.h */,
 				E01FB12E191222FB00229340 /* GreenCircleUIKitLayer.m */,
-				E0F8B6C819175E7900CCF311 /* DrawingViewWithClipping.h */,
-				E0F8B6C919175E7900CCF311 /* DrawingViewWithClipping.m */,
+				E0F8B6C819175E7900CCF311 /* ArrowWithClipping.h */,
+				E0F8B6C919175E7900CCF311 /* ArrowWithClipping.m */,
 				E0D91A4E19135104003A29C5 /* YellowCircleCoreGraphicsLayer.h */,
 				E0D91A4F19135104003A29C5 /* YellowCircleCoreGraphicsLayer.m */,
 				E01FB12A19121F3200229340 /* RedCircleViewCoreGraphics.h */,
@@ -393,9 +393,9 @@
 				E0FDEAE5190A29C30006DE0A /* AppDelegate.m in Sources */,
 				E01FB12C19121F3200229340 /* RedCircleViewCoreGraphics.m in Sources */,
 				E0FDEAE1190A29C30006DE0A /* main.m in Sources */,
-				E0F8B6CA19175E7900CCF311 /* DrawingViewWithClipping.m in Sources */,
+				E0F8B6CA19175E7900CCF311 /* ArrowWithClipping.m in Sources */,
 				E0B4296D1916288500BD223E /* VignetteFilter.m in Sources */,
-				E0B429731916336100BD223E /* DrawingView.m in Sources */,
+				E0B429731916336100BD223E /* Arrow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

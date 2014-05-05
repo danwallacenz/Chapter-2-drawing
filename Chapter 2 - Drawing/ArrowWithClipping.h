@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DrawingViewWithClipping : UIView
+@interface ArrowWithClipping : UIView
 
 @end
