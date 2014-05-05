@@ -33,7 +33,20 @@
 {
     // Drawing code
     
+//    CGContextRef con = UIGraphicsGetCurrentContext();
+//    [self.arrow drawAtPoint:CGPointMake(0,0)];
+//    for (int i=0; i<3; i++) {
+//        CGContextTranslateCTM(con, 20, 100);
+//        CGContextRotateCTM(con, 30 * M_PI/180.0);
+//        CGContextTranslateCTM(con, -20, -100);
+//        [self.arrow drawAtPoint:CGPointMake(0,0)];
+//    }
+    
+    
+    // Add shadows
     CGContextRef con = UIGraphicsGetCurrentContext();
+    CGContextSetShadow(con, CGSizeMake(7, 7), 12);
+    CGContextBeginTransparencyLayer(con, nil);
     [self.arrow drawAtPoint:CGPointMake(0,0)];
     for (int i=0; i<3; i++) {
         CGContextTranslateCTM(con, 20, 100);
@@ -41,7 +54,7 @@
         CGContextTranslateCTM(con, -20, -100);
         [self.arrow drawAtPoint:CGPointMake(0,0)];
     }
-    
+    CGContextEndTransparencyLayer(con);
     
 }
 
