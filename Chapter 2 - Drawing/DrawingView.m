@@ -27,7 +27,7 @@
     
     [self drawArrowUsingCoreGraphics];
     
-    [self drawArrowUsingUIKit];
+//    [self drawArrowUsingUIKit];
     
 }
 
@@ -35,7 +35,23 @@
 {
     // shaft of the arrow
     UIBezierPath *p = [UIBezierPath bezierPath];
-    
+    [p moveToPoint: CGPointMake(100, 100)];
+    [p addLineToPoint: CGPointMake(100, 19)];
+    [p setLineWidth: 20];
+    [p stroke];
+    //point of the arrow
+    [[UIColor redColor] set];
+    [p removeAllPoints];
+    [p moveToPoint: CGPointMake(80, 25)];
+    [p addLineToPoint: CGPointMake(100, 0)];
+    [p addLineToPoint: CGPointMake(120, 25)];
+    [p fill];
+    // snip out triangle in the tail
+    [p removeAllPoints];
+    [p moveToPoint: CGPointMake(90,101)];
+    [p addLineToPoint: CGPointMake(100, 90)];
+    [p addLineToPoint: CGPointMake(110, 101)];
+    [p fillWithBlendMode:kCGBlendModeClear alpha: 1.0];
 }
 
 - (void) drawArrowUsingCoreGraphics
