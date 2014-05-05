@@ -61,6 +61,11 @@
     // draw the red triangle, the point of the arrow
     //CGContextSetFillColorWithColor(con, [[UIColor redColor] CGColor]);
     // draw the pattern
+
+#define createPatternWithQuartz 2
+#if createPatternWithQuartz==1
+    
+    // Use Core Graphics
     CGColorSpaceRef sp2 = CGColorSpaceCreatePattern(nil);
     CGContextSetFillColorSpace (con, sp2);
     CGColorSpaceRelease (sp2);
@@ -79,7 +84,24 @@
     CGContextSetFillPattern(con, patt, &alph);
     CGPatternRelease(patt);
     
+#elif createPatternWithQuartz==2
     
+    // use UIKit
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(4,4), NO, 0);
+    drawStripes(nil, UIGraphicsGetCurrentContext());
+    UIImage* stripes = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIColor* stripesPattern = [UIColor colorWithPatternImage:stripes];
+    [stripesPattern setFill];
+    UIBezierPath* p = [UIBezierPath bezierPath];
+    [p moveToPoint:CGPointMake(80,25)];
+    [p addLineToPoint:CGPointMake(100,0)];
+    [p addLineToPoint:CGPointMake(120,25)];
+    [p fill];
+#endif
+    
+    
+    // draw the arrowhead
     CGContextMoveToPoint(con, 80, 25);
     CGContextAddLineToPoint(con, 100, 0);
     CGContextAddLineToPoint(con, 120, 25);
