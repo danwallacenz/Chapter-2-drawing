@@ -25,9 +25,16 @@
 - (void)drawRect:(CGRect)rect
 {
     
+    [self drawArrowUsingUIKit];
+
 //    [self drawArrowUsingCoreGraphics];
     
-    [self drawArrowUsingUIKit];
+    UIBezierPath* path = [UIBezierPath
+                          bezierPathWithRoundedRect: CGRectMake(2, 2, 146, 96)
+                          cornerRadius: 10];
+    path.lineWidth = 2;
+    [UIColor.blackColor setStroke];
+    [path stroke];
     
     [self drawArrowUsingCoreGraphics];
     
